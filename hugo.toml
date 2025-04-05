@@ -1,0 +1,75 @@
+baseURL = 'blog.kalilarosa.xyz'
+languageCode = 'en-us'
+title = 'Jus a silly little blog.'
+theme = "hugo-noir"
+
+# URL handling
+relativeURLs = true
+canonifyURLs = true
+
+# Taxonomy configuration
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+### Personal Information
+[params]
+name = "Adam Kalinowski"
+location = "St. Petersburg, FL, USA"
+description = "Just a silly little guy"
+profile_image = "/images/profile.jpg"
+github = "https://github.com/adamkali"
+email = "adam.kalilarosa@proton.me"
+linkedin = "https://linkedin.com/in/yourusername"
+
+[params.socialIcons]
+github = "https://github.com/adamkali"
+email = "adam.kalilarosa@proton.me"
+linkedin = "https://linkedin.com/in/yourusername"
+
+### Experience Section
+
+[[params.experience]]
+company = "Legal Automation Systems"
+role = "Fullstack Software Engineer"
+period = "October 2021 - Present"
+logo = "/images/company/logo.png"
+description = "Brief description of your role and responsibilities."
+responsibilities = [
+    "Responsibility 1 with specific achievements",
+    "Responsibility 2 with specific achievements",
+    "Responsibility 3 with specific achievements"
+]
+
+# For open source contributions
+[[params.experience]]
+company = "GitHub"
+role = "Plugin Author"
+period = "Jan 2023 - Present"
+description = "Writing silly little plugins."
+github_username = "adamkali"
+
+### Featured Content
+### Navigation Menu
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    name = "Experience"
+    url = "/experience/"
+    weight = 2
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+  [[menu.main]]
+    name = "Blogs"
+    url = "/blogs/"
+    weight = 4
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
