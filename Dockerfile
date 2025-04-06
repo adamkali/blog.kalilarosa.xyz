@@ -12,4 +12,4 @@ COPY . /app
 EXPOSE 1313
 
 # Run Hugo server in the foreground
-CMD ["hugo", "server"]
+CMD ["hugo", "server", "-c", "/app/hugo.toml"]
