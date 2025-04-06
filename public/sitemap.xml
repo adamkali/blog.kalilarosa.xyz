@@ -2,23 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>blog.kalilarosa.xyz/categories/blog/</loc>
-  </url><url>
-    <loc>blog.kalilarosa.xyz/categories/</loc>
-  </url><url>
-    <loc>blog.kalilarosa.xyz/categories/hugo/</loc>
-  </url><url>
     <loc>blog.kalilarosa.xyz/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/neorg/</loc>
-  </url><url>
-    <loc>blog.kalilarosa.xyz/posts/neorg-is-changing-the-way-i-think/</loc>
-  </url><url>
-    <loc>blog.kalilarosa.xyz/categories/neovim/</loc>
-  </url><url>
-    <loc>blog.kalilarosa.xyz/categories/organization/</loc>
+    <loc>blog.kalilarosa.xyz/dotfiles/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
     <loc>blog.kalilarosa.xyz/posts/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/categories/blog/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/categories/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/categories/hugo/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/categories/neorg/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/posts/neorg-is-changing-the-way-i-think/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/categories/neovim/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/categories/organization/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/categories/shell/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/dotfiles/starship/</loc>
+    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+  </url><url>
+    <loc>blog.kalilarosa.xyz/about/</loc>
   </url><url>
     <loc>blog.kalilarosa.xyz/tags/</loc>
   </url>

@@ -1,3 +1,8 @@
-You just stumbled onto my blog about all things Adam Kalinowski.
-- Read about what i have been up to in [[posts]]
-- Check out my configs that I have posted [configs]
+---
+lead: "You just stumbled onto one of the blogs of all time."
+---
+
+- Read [about me?](/about)
+- Read about what [I have been up to](/posts)
+- Check out some of my configs
+    - [starship](/dotfiles/starship)

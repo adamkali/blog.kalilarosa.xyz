@@ -6,13 +6,14 @@
     <description>Recent content in Neovim on Jus a silly little blog.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 05 Apr 2025 19:29:23 -0500</lastBuildDate>
     <atom:link href="blog.kalilarosa.xyz/categories/neovim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Neorg Is Changing The Way that I Think</title>
       <link>blog.kalilarosa.xyz/posts/neorg-is-changing-the-way-i-think/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
       <guid>blog.kalilarosa.xyz/posts/neorg-is-changing-the-way-i-think/</guid>
-      <description>&lt;h1 id=&#34;neorg-is-changing-the-way-that-i-think&#34;&gt;Neorg Is Changing The Way that I Think&lt;/h1&gt;&#xA;&lt;p&gt;According to my imposter syndrome, I am an inexperienced software engineer. Yet when i look back through out the years, I have been a software engineer for almost &lt;strong&gt;Six years&lt;/strong&gt;. I began my journey as a student working on sorption simulations with large metal organic frameworks in a computational chemistry lab.&#xA;Now if you have ever worked on a supercomputer, you would know that you do not simply log onto a supercomputer ran by a university. You &lt;strong&gt;ssh&lt;/strong&gt; into the server, and run your code in the terminal by starting a job. So when i began as a resarch student i would write my code and then scp the file to my home directory of my instance. This was awful. However a graduate student that i was working with suggested learning how to use vim. That way i could do my programming in vim on the server.&lt;/p&gt;</description>
+      <description>&lt;p&gt;According to my imposter syndrome, I am an inexperienced software engineer. Yet when I look back through out the years, I have been a software engineer for almost &lt;strong&gt;Six years&lt;/strong&gt;. I began my journey as a student working on sorption simulations with large metal organic frameworks in a computational chemistry lab.&#xA;Now if you have ever worked on a supercomputer, you would know that you do not simply log onto a supercomputer ran by a university. You &lt;strong&gt;ssh&lt;/strong&gt; into the server, and run your code in the terminal by starting a job. So when I began as a resarch student I would write my code and then scp the file to my home directory of my instance. This was awful. However a graduate student that I was working with suggested learning how to use vim. That way I could do my programming in vim on the server.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

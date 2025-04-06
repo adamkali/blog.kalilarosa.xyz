@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head>
+  
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="blog.kalilarosa.xyz/favicon.ico" />
+<link rel="stylesheet" href="https://www.nerdfonts.com/assets/css/webfont.css" />
+<meta property="og:url" content="blog.kalilarosa.xyz/dotfiles/starship/">
+  <meta property="og:site_name" content="Jus a silly little blog.">
+  <meta property="og:title" content="Starship Config">
+  <meta property="og:description" content="Check out how I configured my Starship config!">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="dotfiles">
+    <meta property="article:published_time" content="2025-04-05T09:28:54-05:00">
+    <meta property="article:modified_time" content="2025-04-05T19:29:23-05:00">
+
+<title>Jus a silly little blog. | Starship Config</title>
+
+      <link rel="stylesheet" href="blog.kalilarosa.xyz/css/main.min.9d7861a670d885bddfdca28e2bec973020e2e1f1b049a5849a85a2e0fa249e4c.css" integrity="sha256-nXhhpnDYhb3f3KKOK&#43;yXMCDi4fGwSaWEmoWi4Poknkw=" crossorigin="anonymous">
+  
+        <link rel="stylesheet" href="blog.kalilarosa.xyz/css/palette/catpuccin.min.a6f1bd4508a6b97805eeaaeb50fc8c575ad5fa2c430125dd9d003f2ea254600d.css" integrity="sha256-pvG9RQimuXgF7qrrUPyMV1rV&#43;ixDASXdnQA/LqJUYA0=" crossorigin="anonymous">
+
+      <script src="blog.kalilarosa.xyz/js/main.86bb3d8e6f46df0fc97c2731e6b99175a13b87a4086acf578ff9b6992fcf32c1.js" integrity="sha256-hrs9jm9G3w/JfCcx5rmRdaE7h6QIas9Xj/m2mS/PMsE=" crossorigin="anonymous"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+  
+<body
+    class="dark"
+>
+  
+  <main>
+    
+  <div class="container pt-5">
+    <div class="row mt-5 pt-5">
+      
+  <nav aria-label="breadcrumb" class="small">
+    <ol class="breadcrumb fw-bold">
+    <li class="breadcrumb-item">
+      <a href="../../"
+        
+      >home</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="../../posts"
+        
+      >posts</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="../../about"
+        
+      >about</a>
+      
+    </li>
+    <li class="breadcrumb-item">
+      <a href="https://github.com/imgios/not-much"
+        
+          target="_blank" rel="noopener noreferrer"
+        
+      >github</a>
+      
+    </li>
+    </ol>
+  </nav>
+
+    </div>
+    
+    <div class="post">
+      <header class="mb-4">
+        <h1 class="text-uppercase">Starship Config</h1>
+        
+        
+        <div aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item small">
+              
+              <time datetime="2025-04-05T09:28:54-05:00">April 5, 2025</time>
+            </li>
+            
+            
+            
+            <li class="breadcrumb-item small">
+              Updated: <time datetime="2025-04-05T19:29:23-05:00">April 5, 2025</time>
+            </li>
+            
+            <li class="breadcrumb-item small">
+              5 minutes
+            </li>
+          </ol>
+        </div>
+      </header>
+      <article>
+        <h1 id="starship">Starship</h1>
+<p>&ldquo;The minimal, blazing-fast, and infinitely customizable prompt for any shell!&rdquo;.
+I love this program. It creates great prompts for me to be able to create a truly unique to me experience that I really enjoy!</p>
+<h2 id="the-schema">The schema</h2>
+<p>This will allow you to get some vscode auto completions. I dont know how to get this to do the thing with neovim.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#f1fa8c">&#34;$schema&#34;</span> = <span style="color:#f1fa8c">&#39;https://starship.rs/config-schema.json&#39;</span>
+</span></span></code></pre></div><h2 id="now-for-the-format">Now for the format</h2>
+<p>Now I want to try a two line layout to be honest.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;&#39;&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">$os$directory$git_branch$git_commit
+</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">$rust$python$lua$golang$gleam$dotnet$bun$character &#39;&#39;&#39;</span>
+</span></span></code></pre></div><h2 id="the-colorscheme">The Colorscheme</h2>
+<h3 id="colors">Colors</h3>
+<p>Basically I want to be able to use my <a href="https://github.com/adamkali/vaporlush">vaporlush</a> theme that I really love! So just getting the lua code from my code editor:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span> <span style="color:#6272a4">--- @type Vaporlush.Palette</span>
+</span></span><span style="display:flex;"><span> VaporPalette <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>     bg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#0e102d&#39;</span>,
+</span></span><span style="display:flex;"><span>     fg <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#079ef0&#39;</span>,
+</span></span><span style="display:flex;"><span>     bg_highlight <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#0a2846&#39;</span>,
+</span></span><span style="display:flex;"><span>     fg_highlight <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#5885ed&#39;</span>,
+</span></span><span style="display:flex;"><span>     comment <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#8da0b8&#39;</span>,
+</span></span><span style="display:flex;"><span>     primary0 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#0700de&#39;</span>,
+</span></span><span style="display:flex;"><span>     primary1 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#0b03fc&#39;</span>,
+</span></span><span style="display:flex;"><span>     primary2 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#352ff5&#39;</span>,
+</span></span><span style="display:flex;"><span>     primary3 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#4e47ff&#39;</span>,
+</span></span><span style="display:flex;"><span>     secondary0 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#b50465&#39;</span>,
+</span></span><span style="display:flex;"><span>     secondary1 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#e60580&#39;</span>,
+</span></span><span style="display:flex;"><span>     secondary2 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#fa34a1&#39;</span>,
+</span></span><span style="display:flex;"><span>     secondary3 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#fc65b8&#39;</span>,
+</span></span><span style="display:flex;"><span>     tertiary0 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#3f10cc&#39;</span>,
+</span></span><span style="display:flex;"><span>     tertiary1 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#6439e6&#39;</span>,
+</span></span><span style="display:flex;"><span>     tertiary2 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#8864f5&#39;</span>,
+</span></span><span style="display:flex;"><span>     tertiary3 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#af95fc&#39;</span>,
+</span></span><span style="display:flex;"><span>     quartary0 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#fc5e03&#39;</span>,
+</span></span><span style="display:flex;"><span>     quartary1 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#fc853f&#39;</span>,
+</span></span><span style="display:flex;"><span>     quartary2 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#f59b67&#39;</span>,
+</span></span><span style="display:flex;"><span>     quartary3 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#ffb68c&#39;</span>,
+</span></span><span style="display:flex;"><span>     gitsigns <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>         info <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#006655&#39;</span>,
+</span></span><span style="display:flex;"><span>         add <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#00ccaa&#39;</span>,
+</span></span><span style="display:flex;"><span>         change <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#e3307a&#39;</span>,
+</span></span><span style="display:flex;"><span>         danger <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;#c71e26&#39;</span>
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> <span style="color:#ff79c6">return</span> VaporPalette
+</span></span></code></pre></div><p>I think that it is very simple to convert to a starship config.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>palette = <span style="color:#f1fa8c">&#39;vaporlush&#39;</span>
+</span></span><span style="display:flex;"><span>[palettes.vaporlush]
+</span></span><span style="display:flex;"><span>bg = <span style="color:#f1fa8c">&#39;#0e102d&#39;</span>
+</span></span><span style="display:flex;"><span>fg = <span style="color:#f1fa8c">&#39;#079ef0&#39;</span>
+</span></span><span style="display:flex;"><span>bg_highlight = <span style="color:#f1fa8c">&#39;#0a2846&#39;</span>
+</span></span><span style="display:flex;"><span>fg_highlight = <span style="color:#f1fa8c">&#39;#5885ed&#39;</span>
+</span></span><span style="display:flex;"><span>comment = <span style="color:#f1fa8c">&#39;#8da0b8&#39;</span>
+</span></span><span style="display:flex;"><span>primary0 = <span style="color:#f1fa8c">&#39;#0700de&#39;</span>
+</span></span><span style="display:flex;"><span>primary1 = <span style="color:#f1fa8c">&#39;#0b03fc&#39;</span>
+</span></span><span style="display:flex;"><span>primary2 = <span style="color:#f1fa8c">&#39;#352ff5&#39;</span>
+</span></span><span style="display:flex;"><span>primary3 = <span style="color:#f1fa8c">&#39;#4e47ff&#39;</span>
+</span></span><span style="display:flex;"><span>secondary0 = <span style="color:#f1fa8c">&#39;#b50465&#39;</span>
+</span></span><span style="display:flex;"><span>secondary1 = <span style="color:#f1fa8c">&#39;#e60580&#39;</span>
+</span></span><span style="display:flex;"><span>secondary2 = <span style="color:#f1fa8c">&#39;#fa34a1&#39;</span>
+</span></span><span style="display:flex;"><span>secondary3 = <span style="color:#f1fa8c">&#39;#fc65b8&#39;</span>
+</span></span><span style="display:flex;"><span>tertiary0 = <span style="color:#f1fa8c">&#39;#3f10cc&#39;</span>
+</span></span><span style="display:flex;"><span>tertiary1 = <span style="color:#f1fa8c">&#39;#6439e6&#39;</span>
+</span></span><span style="display:flex;"><span>tertiary2 = <span style="color:#f1fa8c">&#39;#8864f5&#39;</span>
+</span></span><span style="display:flex;"><span>tertiary3 = <span style="color:#f1fa8c">&#39;#af95fc&#39;</span>
+</span></span><span style="display:flex;"><span>quartary0 = <span style="color:#f1fa8c">&#39;#fc5e03&#39;</span>
+</span></span><span style="display:flex;"><span>quartary1 = <span style="color:#f1fa8c">&#39;#fc853f&#39;</span>
+</span></span><span style="display:flex;"><span>quartary2 = <span style="color:#f1fa8c">&#39;#f59b67&#39;</span>
+</span></span><span style="display:flex;"><span>quartary3 = <span style="color:#f1fa8c">&#39;#ffb68c&#39;</span>
+</span></span></code></pre></div><p>Now it is a simple matter of just activating the palette</p>
+<h2 id="modules">Modules</h2>
+<h3 id="bun">Bun</h3>
+<p>The bun module shows the currently installed version of the bun JavaScript runtime. By default the module will be shown if any of the following conditions are met:</p>
+<ul>
+<li>The current directory contains a bun.lock file</li>
+<li>The current directory contains a bun.lockb file</li>
+<li>The current directory contains a bunfig.toml file</li>
+</ul>
+<h4 id="code">Code</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[bun]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold bg:#aaaacc fg:bg_highlight&#39;</span>
+</span></span><span style="display:flex;"><span> format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div><h3 id="character">Character</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[character] <span style="color:#6272a4"># The name of the module we are configuring is &#39;character&#39;</span>
+</span></span><span style="display:flex;"><span>success_symbol = <span style="color:#f1fa8c">&#39;[&gt;&gt;=](bold quartary3)&#39;</span>
+</span></span><span style="display:flex;"><span>error_symbol = <span style="color:#f1fa8c">&#39;[&gt;&gt;=](bold quartary0)&#39;</span>
+</span></span></code></pre></div><h3 id="docker-context">Docker Context</h3>
+<p>The docker_context module shows the currently active Docker context if it&rsquo;s not set to default or desktop-linux, or if the</p>
+<ul>
+<li>DOCKER_MACHINE_NAME,</li>
+<li>DOCKER_HOST</li>
+<li>DOCKER_CONTEXT
+environment variables are set (as they are meant to override the context in use).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[docker_context]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold primary1&#39;</span>
+</span></span><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div><h3 id="dotnet">Dotnet</h3>
+<pre tabindex="0"><code class="language-lang" data-lang="lang">[dotnet]
+symbol = &#39; &#39;
+style = &#39;bold primary3&#39;
+heuristic = false
+format = &#39;[ $symbol $version ]($style)&#39;
+</code></pre><h3 id="git-branch">Git Branch</h3>
+<p>The git_branch module shows the active branch of the repo in your current directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[git_branch]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>truncation_length = <span style="color:#bd93f9">8</span>
+</span></span><span style="display:flex;"><span>truncation_symbol = <span style="color:#f1fa8c">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>ignore_branches = [<span style="color:#f1fa8c">&#39;master&#39;</span>, <span style="color:#f1fa8c">&#39;main&#39;</span>]
+</span></span></code></pre></div><h3 id="git-commit">Git Commit</h3>
+<p>The git_commit module shows the current commit hash and also the tag (if any) of the repo in your current directory.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[git_commit]
+</span></span><span style="display:flex;"><span>commit_hash_length = <span style="color:#bd93f9">4</span>
+</span></span><span style="display:flex;"><span>tag_symbol = <span style="color:#f1fa8c">&#39;󰓹 &#39;</span>
+</span></span></code></pre></div><h3 id="gleam">Gleam</h3>
+<p>The gleam module shows the currently installed version of Gleam. By default the module will be shown if any of the following conditions are met:</p>
+<ul>
+<li>The current directory contains a gleam.toml file</li>
+<li>The current directory contains a file with the .gleam extension</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[gleam]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold tertiary1&#39;</span>
+</span></span><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div><h3 id="go">Go</h3>
+<p>The golang module shows the currently installed version of Go. By default the module will be shown if any of the following conditions are met:</p>
+<ul>
+<li>The current directory contains a go.mod file</li>
+<li>The current directory contains a go.sum file</li>
+<li>The current directory contains a go.work file</li>
+<li>The current directory contains a glide.yaml file</li>
+<li>The current directory contains a Gopkg.yml file</li>
+<li>The current directory contains a Gopkg.lock file</li>
+<li>The current directory contains a .go-version file</li>
+<li>The current directory contains a Godeps directory</li>
+<li>The current directory contains a file with the .go extension</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[golang]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold primary3&#39;</span>
+</span></span><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div><h3 id="lua">Lua</h3>
+<p>The lua module shows the currently installed version of Lua. By default the module will be shown if any of the following conditions are met:</p>
+<ul>
+<li>The current directory contains a .lua-version file</li>
+<li>The current directory contains a lua directory</li>
+<li>The current directory contains a file with the .lua extension</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[lua]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold primary0&#39;</span>
+</span></span><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div><h3 id="node">Node</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[nodejs]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold #00ccaa&#39;</span>
+</span></span><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div><h3 id="os">OS</h3>
+<p>The os module shows the current operating system. OS information is detected via the os_info crate.
+Also in here I add custom symbols for some of the os symbols as well.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[os]
+</span></span><span style="display:flex;"><span>disabled = <span style="color:#ff79c6">false</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#34;tertiary3&#34;</span>
+</span></span><span style="display:flex;"><span>[os.symbols]
+</span></span><span style="display:flex;"><span>Ubuntu = <span style="color:#f1fa8c">&#34; &#34;</span>
+</span></span><span style="display:flex;"><span>Arch = <span style="color:#f1fa8c">&#34; &#34;</span>
+</span></span><span style="display:flex;"><span>Windows = <span style="color:#f1fa8c">&#34; &#34;</span>
+</span></span><span style="display:flex;"><span>Macos = <span style="color:#f1fa8c">&#34; &#34;</span>
+</span></span></code></pre></div><h3 id="rust">Rust</h3>
+<p>By default the rust module shows the currently installed version of Rust. The module will be shown if any of the following conditions are met:</p>
+<ul>
+<li>The current directory contains a Cargo.toml file</li>
+<li>The current directory contains a file with the .rs extension</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[rust]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold #c71e26&#39;</span>
+</span></span><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div><h3 id="python">Python</h3>
+<p>The python module shows the currently installed version of Python and the current Python virtual environment if one is activated.
+If pyenv_version_name is set to true, it will display the pyenv version name. Otherwise, it will display the version number from python &ndash;version.
+By default, the module will be shown if any of the following conditions are met:</p>
+<ul>
+<li>The current directory contains a .python-version file</li>
+<li>The current directory contains a Pipfile file</li>
+<li>The current directory contains a <strong>init</strong>.py file</li>
+<li>The current directory contains a pyproject.toml file</li>
+<li>The current directory contains a requirements.txt file</li>
+<li>The current directory contains a setup.py file</li>
+<li>The current directory contains a tox.ini file</li>
+<li>The current directory contains a pixi.toml file</li>
+<li>The current directory contains a file with the .py extension.</li>
+<li>The current directory contains a file with the .ipynb extension.</li>
+<li>A virtual environment is currently activated</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[python]
+</span></span><span style="display:flex;"><span>symbol = <span style="color:#f1fa8c">&#39; &#39;</span>
+</span></span><span style="display:flex;"><span>pyenv_version_name = <span style="color:#ff79c6">true</span>
+</span></span><span style="display:flex;"><span>style = <span style="color:#f1fa8c">&#39;bold quartary1&#39;</span>
+</span></span><span style="display:flex;"><span>format = <span style="color:#f1fa8c">&#39;[ $symbol $version ]($style)&#39;</span>
+</span></span></code></pre></div>
+      </article>
+      
+
+      <div class="row">
+    <div class="col-md">
+        
+    </div>
+    <div class="col-md text-md-end">
+        
+    </div>
+</div>
+    </div>
+  </div>
+  <footer>
+    <div class="container mt-4 pb-1">
+    <p class="small opacity-75">
+        
+        
+        // powered by <a href="https://gohugo.io/">hugo</a> and <a href="https://github.com/imgios/not-much">imgios/not-much</a>
+        
+    </p>
+</div>
+
+  </footer>
+
+  </main>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
