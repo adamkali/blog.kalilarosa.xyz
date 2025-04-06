@@ -9,6 +9,7 @@ WORKDIR /app
 
 # Copy the current directory contents into the container at /app
 COPY . /app
+EXPOSE 1313
 
 # Run Hugo server in the foreground
 CMD ["hugo", "server"]
