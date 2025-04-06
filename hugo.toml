@@ -1,7 +1,7 @@
 baseURL = 'blog.kalilarosa.xyz'
 languageCode = 'en-us'
+theme = "not-much"
 title = 'Jus a silly little blog.'
-theme = "hugo-noir"
 
 # URL handling
 relativeURLs = true
@@ -9,8 +9,8 @@ canonifyURLs = true
 
 # Taxonomy configuration
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+category = "categories"
+tag = "tags"
 
 ### Personal Information
 [params]
@@ -40,36 +40,51 @@ responsibilities = [
     "Responsibility 2 with specific achievements",
     "Responsibility 3 with specific achievements"
 ]
+[markup]
+  [markup.highlight]
+    style = 'dracula'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
-# For open source contributions
-[[params.experience]]
-company = "GitHub"
-role = "Plugin Author"
-period = "Jan 2023 - Present"
-description = "Writing silly little plugins."
-github_username = "adamkali"
 
-### Featured Content
-### Navigation Menu
+[params]
+theme = "dark"
+palette = "catpuccin"
+showThemeNotice = true
+showPostsSummary = true
 
+# Navigation
 [menu]
   [[menu.main]]
-    name = "About"
-    url = "/about/"
+    identifier = "home"
+    name = "home"
+    title = "/"
+    url = "/"
     weight = 1
+  
   [[menu.main]]
-    name = "Experience"
-    url = "/experience/"
+    identifier = "posts"
+    name = "posts"
+    title = "./posts"
+    url = "/posts"
     weight = 2
+ [[menu.main]]
+ identifier = "configs"
+ name = "configs"
+ title = ".config/"
+ url = "/configs"
+  weight = 3
   [[menu.main]]
-    name = "Projects"
-    url = "/projects/"
-    weight = 3
-  [[menu.main]]
-    name = "Blogs"
-    url = "/blogs/"
+    identifier = "about"
+    name = "about"
+    title = "About"
+    url = "/about"
     weight = 4
+  
   [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
+    identifier = "github"
+    name = "github"
+    title = "GitHub"
+    url = "https://github.com/imgios/not-much"
     weight = 5
