@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Jus a silly little blog.</title>
-    <link>blog.kalilarosa.xyz/categories/</link>
+    <link>//localhost:1313/categories/</link>
     <description>Recent content in Categories on Jus a silly little blog.</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Apr 2025 19:29:23 -0500</lastBuildDate>
-    <atom:link href="blog.kalilarosa.xyz/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog</title>
-      <link>blog.kalilarosa.xyz/categories/blog/</link>
+      <link>//localhost:1313/categories/blog/</link>
       <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/categories/blog/</guid>
+      <guid>//localhost:1313/categories/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>Hugo</title>
-      <link>blog.kalilarosa.xyz/categories/hugo/</link>
+      <link>//localhost:1313/categories/hugo/</link>
       <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/categories/hugo/</guid>
+      <guid>//localhost:1313/categories/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Neorg</title>
-      <link>blog.kalilarosa.xyz/categories/neorg/</link>
+      <link>//localhost:1313/categories/neorg/</link>
       <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/categories/neorg/</guid>
+      <guid>//localhost:1313/categories/neorg/</guid>
       <description></description>
     </item>
     <item>
       <title>Neovim</title>
-      <link>blog.kalilarosa.xyz/categories/neovim/</link>
+      <link>//localhost:1313/categories/neovim/</link>
       <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/categories/neovim/</guid>
+      <guid>//localhost:1313/categories/neovim/</guid>
       <description></description>
     </item>
     <item>
       <title>Organization</title>
-      <link>blog.kalilarosa.xyz/categories/organization/</link>
+      <link>//localhost:1313/categories/organization/</link>
       <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/categories/organization/</guid>
+      <guid>//localhost:1313/categories/organization/</guid>
       <description></description>
     </item>
     <item>
       <title>Shell</title>
-      <link>blog.kalilarosa.xyz/categories/shell/</link>
+      <link>//localhost:1313/categories/shell/</link>
       <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/categories/shell/</guid>
+      <guid>//localhost:1313/categories/shell/</guid>
       <description></description>
     </item>
   </channel>

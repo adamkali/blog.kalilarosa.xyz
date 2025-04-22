@@ -1,6 +1,10 @@
----
-lead: I'm Him.
----
++++
+title="About"
+lead="I'm Him."
+type="about"
+layout="single"
++++
+
 # Adam Kalinowski
 
 As a physics major turned software engineer, I have found that I have a particular set of skills to be just who you need to find to solve a problem.

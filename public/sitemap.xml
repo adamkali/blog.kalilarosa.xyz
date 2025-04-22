@@ -2,44 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>blog.kalilarosa.xyz/</loc>
+    <loc>//localhost:1313/</loc>
+    <lastmod>2025-04-10T15:37:59-05:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/</loc>
+    <lastmod>2025-04-10T15:37:59-05:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/configuring-my-blog/</loc>
+    <lastmod>2025-04-10T15:37:59-05:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/dotfiles/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/dotfiles/</loc>
+    <loc>//localhost:1313/categories/blog/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/posts/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/blog/</loc>
+    <loc>//localhost:1313/categories/hugo/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/</loc>
+    <loc>//localhost:1313/categories/neorg/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/hugo/</loc>
+    <loc>//localhost:1313/posts/neorg-is-changing-the-way-i-think/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/neorg/</loc>
+    <loc>//localhost:1313/categories/neovim/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/posts/neorg-is-changing-the-way-i-think/</loc>
+    <loc>//localhost:1313/categories/organization/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/neovim/</loc>
+    <loc>//localhost:1313/categories/shell/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/organization/</loc>
+    <loc>//localhost:1313/dotfiles/starship/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>blog.kalilarosa.xyz/categories/shell/</loc>
-    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
+    <loc>//localhost:1313/about/</loc>
   </url><url>
-    <loc>blog.kalilarosa.xyz/dotfiles/starship/</loc>
-    <lastmod>2025-04-05T19:29:23-05:00</lastmod>
-  </url><url>
-    <loc>blog.kalilarosa.xyz/about/</loc>
-  </url><url>
-    <loc>blog.kalilarosa.xyz/tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>

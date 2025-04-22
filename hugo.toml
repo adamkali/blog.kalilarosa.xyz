@@ -1,15 +1,14 @@
 baseURL = 'blog.kalilarosa.xyz'
 languageCode = 'en-us'
-theme = "not-much"
+theme = ""
 title = 'Jus a silly little blog.'
 # URL handling
 relativeURLs = true
 canonifyURLs = true
+custom_css = ["css/index.css"]
+pygmentsUseClasses=true
 
 [params]
-theme = "dark"
-palette = "catpuccin"
-showThemeNotice = true
 name = "Adam Kalinowski"
 location = "St. Petersburg, FL, USA"
 description = "Just a silly little guy"
@@ -17,6 +16,8 @@ profile_image = "/images/profile.jpg"
 github = "https://github.com/adamkali"
 email = "adam.kalilarosa@proton.me"
 linkedin = "https://linkedin.com/in/yourusername"
+
+
 
 # Taxonomy configuration
 [taxonomies]
@@ -43,37 +44,36 @@ responsibilities = [
     "Responsibility 2 with specific achievements",
     "Responsibility 3 with specific achievements"
 ]
-[markup]
-  [markup.highlight]
-    style = 'dracula'
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
 
 # Navigation
 [menu]
 [[menu.main]]
 identifier = "home"
-name = "home"
+name = "Home"
 title = "/"
 url = "/"
 weight = 1
 [[menu.main]]
 identifier = "posts"
-name = "posts"
+name = "Posts"
 title = "posts"
 url = "/posts"
 weight = 2
 [[menu.main]]
 identifier = "about"
-name = "about"
+name = "About"
 title = "About"
 url = "/about"
 weight = 3
 [[menu.main]]
 identifier = "github"
-name = "github"
+name = "Github"
 title = "GitHub"
-url = "https://github.com/imgios/not-much"
+url = "https://github.com/adamkali"
 weight = 4
+[[menu.main]]
+identifier = "linkedin"
+name = "Linkedin"
+title = "linkedin"
+url = "https://github.com/adamkali"
+weight = 5

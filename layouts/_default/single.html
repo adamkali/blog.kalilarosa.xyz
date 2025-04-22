@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="">
+  <div class="">
+    {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+  </div>
+  {{ if .Params.toc }}
+  <div class="">
+    <p class="">
+      Table of Contents:
+    </p>
+    {{ .TableOfContents }}
+  </div>
+  {{ end }}
+  <div class="">
+    <header class="">
+      <h1 class="">{{ .Title }}</h1>
+      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+      {{ $dateHuman := .Date | time.Format ":date_long" }}
+      <i class="nf nf-fa-clock_0"></i>
+      <div aria-label="breadcrumb">
+        <ol class="">
+          <li class="">
+            {{ if .Draft }}
+            <span class="">DRAFT</span> &#183;
+            {{ end }}
+            Created: <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+          </li>
+          {{ $lastModMachine := .Lastmod | time.Format "2006-01-02T15:04:05-07:00" }}
+          {{ if and (isset .Params "lastmod") (ne $lastModMachine $dateMachine) }}
+          {{ $lastModHuman := .Lastmod | time.Format ":date_long" }}
+          <li class="">
+            Updated: <time datetime="{{ $lastModMachine }}">{{ $lastModHuman }}</time>
+          </li>
+          {{ end }}
+          <li class="">
+
+            Reading Time: {{ printf "%d minutes" .ReadingTime }}
+          </li>
+        </ol>
+      </div>
+    </header>
+    <article>
+      {{ .Content }}
+    </article>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ partial "post-pagination.html" . }}
+  </div>
+</div>
+<footer>
+  {{ partial "footer.html" . }}
+</footer>
+{{ end }}

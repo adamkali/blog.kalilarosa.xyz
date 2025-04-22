@@ -1,0 +1,496 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css"
+
+@font-face {
+    font-family: "Maple";
+    src: url('fonts/MapleMono-NF-Regular.ttf') format("truetype");
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --sky: oklch(0.57 0.2055 272.4);
+    --bright-sky: oklch(0.78 0.0863 265.86);
+    --blue: oklch(0.38 0.2245 265.86);
+    --rose: oklch(0.7 0.236 343.47);
+    --electrum: oklch(0.31 0.0526 307.46 / 55%);
+    --steel: oklch(0.72 0.0811 279.93);
+    --obsidian: oklch(0.19 0.0207 302.18 / 54%);
+    --obsidian-non-transparent: oklch(0.19 0.0207 302.18);
+    --deep-ice: oklch(0.2 0.0419 266.93 / 41.26%);
+    --deep-ice-non-transparent: oklch(0.28 0.0822 266.93);
+    --blurple: oklch(0.45 0.2319 281.64);
+    --pliue: oklch(0.44 0.2171 296.87);
+}
+
+body {
+    background-color: var(--blurple);
+    font-family: "Maple", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI';
+    color: var(--blurple);
+    margin: 2rem;
+
+    /* Add repeating SVG background */
+    background-image: url('../line.svg');
+    background-repeat: repeat;
+    background-size: 25px 25px;
+
+    animation: moveBackground 50s linear infinite;
+}
+
+@keyframes moveBackground {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    /* horizontal */
+    align-items: center;
+    /* vertical */
+}
+
+svg {
+    stroke: var(black);
+    /* center the svg */
+}
+
+article {
+    display: flex;
+    margin: 5rem auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--deep-ice);
+    /* add bluur effect */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+    /* add rounded corners */
+    border-radius: 22px;
+    /* remove border */
+    border: none;
+    /* add padding */
+
+
+    h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 2.8rem;
+        color: var(--rose);
+        margin-bottom: 3px;
+        text-align: center;
+    }
+
+    h1:after {
+        content: '';
+        display: block;
+        width: 80%;
+        height: 2px;
+        background-color: var(--rose);
+        margin: 10px auto 10px auto;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+        color: var(--rose);
+        margin-bottom: 3px;
+    }
+
+    h2:after {
+        content: '';
+        display: block;
+        width: 80%;
+        height: 2px;
+        background-color: var(--rose);
+        margin: 10px auto 10px auto;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        color: var(--bright-sky);
+        margin-bottom: 6px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+
+        &:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--sky);
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+        }
+
+        &:last-child {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 20px;
+    background-color: var(--deep-ice);
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: var(--rose);
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-left: 20px;
+            font-size: 1.2rem;
+            color: var(--rose);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--sky);
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+
+.navbar {
+    direction: ltr;
+    /* goes from right to left */
+    margin-left: auto;
+    /* pushed to the right side of the screen */
+    padding-left: 20px;
+    background-color: var(--deep-ice);
+    /* add bluur effect */
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+    /* add rounded corners */
+    border-radius: 12px;
+    /* remove border */
+    border: none;
+    display: flex;
+    justify-content: left;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 10px 20px;
+
+    /* adjust the padding as per your requirement */
+
+    li {
+        display: inline-block;
+        position: relative;
+        font-weight: 600;
+        margin-left: 12px;
+        margin-bottom: 7px;
+        padding: 0 10px;
+
+        &:before,
+        &:after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:before {
+                width: 2px;
+                height: 12px;
+                background-color: currentColor;
+                left: -10px;
+            }
+
+            &:after {
+                width: 2px;
+                height: 12px;
+                background-color: currentColor;
+                right: -10px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--rose);
+        }
+    }
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 2.8rem;
+    color: var(--bright-sky);
+    margin-bottom: 3px
+}
+
+.highlight {
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border-radius: 12px;
+    border: none;
+}
+
+.code {
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 12px;
+}
+
+
+/* Generated using: hugo gen chromastyles --style=nord */
+
+/* Background */ .bg { color:#d8dee9;background-color:#2e3440;border-radius: 12px; }
+/* PreWrapper */ .chroma { color:#d8dee9; background-color:#2e3440; padding: 4px 12px; border-radius: 6px; }
+/* Other */ .chroma .x {  }
+/* Error */ .chroma .err { color:#bf616a }
+/* CodeLine */ .chroma .cl {  }
+/* LineLink */ .chroma .lnlinks { outline:none;text-decoration:none;color:inherit }
+/* LineTableTD */ .chroma .lntd { vertical-align:top;padding:0;margin:0;border:0; }
+/* LineTable */ .chroma .lntable { border-spacing:0;padding:0;margin:0;border:0; }
+/* LineHighlight */ .chroma .hl { background-color:#424853 }
+/* LineNumbersTable */ .chroma .lnt { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74 }
+/* LineNumbers */ .chroma .ln { white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#6c6f74 }
+/* Line */ .chroma .line { display:flex; }
+/* Keyword */ .chroma .k { color:#81a1c1;font-weight:bold }
+/* KeywordConstant */ .chroma .kc { color:#81a1c1;font-weight:bold }
+/* KeywordDeclaration */ .chroma .kd { color:#81a1c1;font-weight:bold }
+/* KeywordNamespace */ .chroma .kn { color:#81a1c1;font-weight:bold }
+/* KeywordPseudo */ .chroma .kp { color:#81a1c1 }
+/* KeywordReserved */ .chroma .kr { color:#81a1c1;font-weight:bold }
+/* KeywordType */ .chroma .kt { color:#81a1c1 }
+/* Name */ .chroma .n {  }
+/* NameAttribute */ .chroma .na { color:#8fbcbb }
+/* NameBuiltin */ .chroma .nb { color:#81a1c1 }
+/* NameBuiltinPseudo */ .chroma .bp {  }
+/* NameClass */ .chroma .nc { color:#8fbcbb }
+/* NameConstant */ .chroma .no { color:#8fbcbb }
+/* NameDecorator */ .chroma .nd { color:#d08770 }
+/* NameEntity */ .chroma .ni { color:#d08770 }
+/* NameException */ .chroma .ne { color:#bf616a }
+/* NameFunction */ .chroma .nf { color:#88c0d0 }
+/* NameFunctionMagic */ .chroma .fm {  }
+/* NameLabel */ .chroma .nl { color:#8fbcbb }
+/* NameNamespace */ .chroma .nn { color:#8fbcbb }
+/* NameOther */ .chroma .nx {  }
+/* NameProperty */ .chroma .py { color:#8fbcbb }
+/* NameTag */ .chroma .nt { color:#81a1c1 }
+/* NameVariable */ .chroma .nv {  }
+/* NameVariableClass */ .chroma .vc {  }
+/* NameVariableGlobal */ .chroma .vg {  }
+/* NameVariableInstance */ .chroma .vi {  }
+/* NameVariableMagic */ .chroma .vm {  }
+/* Literal */ .chroma .l {  }
+/* LiteralDate */ .chroma .ld {  }
+/* LiteralString */ .chroma .s { color:#a3be8c }
+/* LiteralStringAffix */ .chroma .sa { color:#a3be8c }
+/* LiteralStringBacktick */ .chroma .sb { color:#a3be8c }
+/* LiteralStringChar */ .chroma .sc { color:#a3be8c }
+/* LiteralStringDelimiter */ .chroma .dl { color:#a3be8c }
+/* LiteralStringDoc */ .chroma .sd { color:#616e87 }
+/* LiteralStringDouble */ .chroma .s2 { color:#a3be8c }
+/* LiteralStringEscape */ .chroma .se { color:#ebcb8b }
+/* LiteralStringHeredoc */ .chroma .sh { color:#a3be8c }
+/* LiteralStringInterpol */ .chroma .si { color:#a3be8c }
+/* LiteralStringOther */ .chroma .sx { color:#a3be8c }
+/* LiteralStringRegex */ .chroma .sr { color:#ebcb8b }
+/* LiteralStringSingle */ .chroma .s1 { color:#a3be8c }
+/* LiteralStringSymbol */ .chroma .ss { color:#a3be8c }
+/* LiteralNumber */ .chroma .m { color:#b48ead }
+/* LiteralNumberBin */ .chroma .mb { color:#b48ead }
+/* LiteralNumberFloat */ .chroma .mf { color:#b48ead }
+/* LiteralNumberHex */ .chroma .mh { color:#b48ead }
+/* LiteralNumberInteger */ .chroma .mi { color:#b48ead }
+/* LiteralNumberIntegerLong */ .chroma .il { color:#b48ead }
+/* LiteralNumberOct */ .chroma .mo { color:#b48ead }
+/* Operator */ .chroma .o { color:#81a1c1 }
+/* OperatorWord */ .chroma .ow { color:#81a1c1;font-weight:bold }
+/* Punctuation */ .chroma .p { color:#eceff4 }
+/* Comment */ .chroma .c { color:#616e87;font-style:italic }
+/* CommentHashbang */ .chroma .ch { color:#616e87;font-style:italic }
+/* CommentMultiline */ .chroma .cm { color:#616e87;font-style:italic }
+/* CommentSingle */ .chroma .c1 { color:#616e87;font-style:italic }
+/* CommentSpecial */ .chroma .cs { color:#616e87;font-style:italic }
+/* CommentPreproc */ .chroma .cp { color:#5e81ac;font-style:italic }
+/* CommentPreprocFile */ .chroma .cpf { color:#5e81ac;font-style:italic }
+/* Generic */ .chroma .g {  }
+/* GenericDeleted */ .chroma .gd { color:#bf616a }
+/* GenericEmph */ .chroma .ge { font-style:italic }
+/* GenericError */ .chroma .gr { color:#bf616a }
+/* GenericHeading */ .chroma .gh { color:#88c0d0;font-weight:bold }
+/* GenericInserted */ .chroma .gi { color:#a3be8c }
+/* GenericOutput */ .chroma .go {  }
+/* GenericPrompt */ .chroma .gp { color:#4c566a;font-weight:bold }
+/* GenericStrong */ .chroma .gs { font-weight:bold }
+/* GenericSubheading */ .chroma .gu { color:#88c0d0;font-weight:bold }
+/* GenericTraceback */ .chroma .gt { color:#bf616a }
+/* GenericUnderline */ .chroma .gl {  }
+/* TextWhitespace */ .chroma .w {  }

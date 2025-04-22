@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="//localhost:1313/favicon.ico" />
+<link rel="stylesheet" href="//localhost:1313/css/index.css">
+<title>Jus a silly little blog. | configuring-my-blog</title>
+
+</head>
+
+<body
+    class="dark"
+>
+  
+  <main>
+    
+<div class="">
+  <div class="">
+    
+  <nav aria-label="breadcrumb" class="navbar">
+    <ol class="">
+    <li class="">
+      <a href="../../"
+        
+      >Home</a>
+      
+    </li>
+    <li class="">
+      <a href="../../posts"
+        class=""
+        
+      >Posts</a>
+      
+    </li>
+    <li class="">
+      <a href="../../about"
+        
+      >About</a>
+      
+    </li>
+    <li class="">
+      <a href="https://github.com/adamkali"
+        
+          target="_blank" rel="noopener noreferrer"
+        
+      >Github</a>
+      
+    </li>
+    <li class="">
+      <a href="https://github.com/adamkali"
+        
+          target="_blank" rel="noopener noreferrer"
+        
+      >Linkedin</a>
+      
+    </li>
+    </ol>
+  </nav>
+
+  </div>
+  
+  <div class="">
+    <header class="">
+      <h1 class="">configuring-my-blog</h1>
+      
+      
+      <i class="nf nf-fa-clock_0"></i>
+      <div aria-label="breadcrumb">
+        <ol class="">
+          <li class="">
+            
+            Created: <time datetime="2025-04-08T06:55:50-05:00">April 8, 2025</time>
+          </li>
+          
+          
+          
+          <li class="">
+            Updated: <time datetime="2025-04-10T15:37:59-05:00">April 10, 2025</time>
+          </li>
+          
+          <li class="">
+
+            Reading Time: 3 minutes
+          </li>
+        </ol>
+      </div>
+    </header>
+    <article>
+      <p>When a developer starts a new website, there are two events that occur. The developer will beset by horrific nightmares about styling the website. The other event is that the developer has fantastic dreams about how much better than they actually are about writing css. So when I saw that this website deployed on my <a href="https://coolify.io/docs/">Coolify</a> instance did not have any styles what so ever even though locally I saw the styles. You know that I had to roll up my sleeves and just start making custom to my own.</p>
+<h1 id="the-problem">The problem</h1>
+<p>Currently I am using <code>hugo server</code> to generate my static site. And also I downloaded the <code>not-much</code> theme to use when styling. I liked the look of it and i was happy to leave it as the theme. But as I said before, when deployed to my server the site did not produce the css that I was expecting. So rather than trying to deepdive on why someone&rsquo;s code was not working; I opted to trying to produce my own theme and learn how the theme-ing works in hugo.
+Looking at the docs, this is done with the following:</p>
+<ul>
+<li>Writing HTML files inside of the <code>/layouts/</code> directory with go&rsquo;s <code>html/template</code> package to define the structure of the blog.</li>
+<li>Writing css files inside of the <code>/static/</code> directory to style the HTML files.</li>
+</ul>
+<h1 id="the-investigation">The investigation</h1>
+<p>First thing is first. I need to nuke the styling of the local copy of my blog. This will give me a good baseline of where to start with styling and try to isolate the problem as best I can. To do this, I decided to pull all of the templates from the not much theme and removed all styling from the templates. Then loaded them into my own layouts directory. This brought me to just using a bare template with image.<br>
+The next thing that i wanted to do was to build out my styling. Now I have mostly used styling libraries to make styling with websites. I love tailwind, and i think that it is a great tool if you favor if you want a nice rule set for creating a good brand identity. That being said, I still feel handicapped in the fact that while I know about css, and I am comfortable with writing it. Sure, I have configured css when needed for widgets on certain window managers in linux. But not for a website explicitly. So since this is just my blog; I thought this would be the best chance to get really good at CSS proper.
+I pulled in reset.css</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* http://meyerweb.com/eric/tools/css/reset/ 
+</span></span></span><span class="line"><span class="cl"><span class="c">v2.0 | 20110126
+</span></span></span><span class="line"><span class="cl"><span class="c">License: none (public domain)
+</span></span></span><span class="line"><span class="cl"><span class="c">*/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">html</span><span class="o">,</span> <span class="nt">body</span><span class="o">,</span> <span class="nt">div</span><span class="o">,</span> <span class="nt">span</span><span class="o">,</span> <span class="nt">applet</span><span class="o">,</span> <span class="nt">object</span><span class="o">,</span> <span class="nt">iframe</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span><span class="o">,</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">pre</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">a</span><span class="o">,</span> <span class="nt">abbr</span><span class="o">,</span> <span class="nt">acronym</span><span class="o">,</span> <span class="nt">address</span><span class="o">,</span> <span class="nt">big</span><span class="o">,</span> <span class="nt">cite</span><span class="o">,</span> <span class="nt">code</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">del</span><span class="o">,</span> <span class="nt">dfn</span><span class="o">,</span> <span class="nt">em</span><span class="o">,</span> <span class="nt">img</span><span class="o">,</span> <span class="nt">ins</span><span class="o">,</span> <span class="nt">kbd</span><span class="o">,</span> <span class="nt">q</span><span class="o">,</span> <span class="nt">s</span><span class="o">,</span> <span class="nt">samp</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">small</span><span class="o">,</span> <span class="nt">strike</span><span class="o">,</span> <span class="nt">strong</span><span class="o">,</span> <span class="nt">sub</span><span class="o">,</span> <span class="nt">sup</span><span class="o">,</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">var</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">b</span><span class="o">,</span> <span class="nt">u</span><span class="o">,</span> <span class="nt">i</span><span class="o">,</span> <span class="nt">center</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">dl</span><span class="o">,</span> <span class="nt">dt</span><span class="o">,</span> <span class="nt">dd</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">fieldset</span><span class="o">,</span> <span class="nt">form</span><span class="o">,</span> <span class="nt">label</span><span class="o">,</span> <span class="nt">legend</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">table</span><span class="o">,</span> <span class="nt">caption</span><span class="o">,</span> <span class="nt">tbody</span><span class="o">,</span> <span class="nt">tfoot</span><span class="o">,</span> <span class="nt">thead</span><span class="o">,</span> <span class="nt">tr</span><span class="o">,</span> <span class="nt">th</span><span class="o">,</span> <span class="nt">td</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">canvas</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">embed</span><span class="o">,</span> 
+</span></span><span class="line"><span class="cl"><span class="nt">figure</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span> 
+</span></span><span class="line"><span class="cl"><span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">output</span><span class="o">,</span> <span class="nt">ruby</span><span class="o">,</span> <span class="nt">section</span><span class="o">,</span> <span class="nt">summary</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">time</span><span class="o">,</span> <span class="nt">mark</span><span class="o">,</span> <span class="nt">audio</span><span class="o">,</span> <span class="nt">video</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">border</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">font-size</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">font</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">vertical-align</span><span class="p">:</span> <span class="kc">baseline</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c">/* HTML5 display-role reset for older browsers */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">article</span><span class="o">,</span> <span class="nt">aside</span><span class="o">,</span> <span class="nt">details</span><span class="o">,</span> <span class="nt">figcaption</span><span class="o">,</span> <span class="nt">figure</span><span class="o">,</span> 
+</span></span><span class="line"><span class="cl"><span class="nt">footer</span><span class="o">,</span> <span class="nt">header</span><span class="o">,</span> <span class="nt">hgroup</span><span class="o">,</span> <span class="nt">menu</span><span class="o">,</span> <span class="nt">nav</span><span class="o">,</span> <span class="nt">section</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">body</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">line-height</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">ol</span><span class="o">,</span> <span class="nt">ul</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">list-style</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">blockquote</span><span class="o">,</span> <span class="nt">q</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">quotes</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">blockquote</span><span class="p">:</span><span class="nd">before</span><span class="o">,</span> <span class="nt">blockquote</span><span class="p">:</span><span class="nd">after</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="nt">q</span><span class="p">:</span><span class="nd">before</span><span class="o">,</span> <span class="nt">q</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">content</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">content</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="nt">table</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">border-spacing</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Why? Well, I would like you take a look at <a href="https://meyerweb.com/eric/thoughts/2007/04/18/reset-reasoning/">this post</a></p>
+
+    </article>
+    
+
+    <div class="row">
+    <div class="col-md">
+        
+        <a href="//localhost:1313/posts/neorg-is-changing-the-way-i-think/">
+            <span>previous: </span>
+            <span>Neorg Is Changing The Way that I Think</span>
+        </a>
+        
+    </div>
+    <div class="col-md text-md-end">
+        
+    </div>
+</div>
+  </div>
+</div>
+<footer>
+  <div class="">
+    <p class="">
+        
+    </p>
+</div>
+
+</footer>
+
+  </main>
+
+  
+</body>
+</html>
