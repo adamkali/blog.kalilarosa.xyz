@@ -5,7 +5,6 @@ title = 'Jus a silly little blog.'
 # URL handling
 relativeURLs = true
 canonifyURLs = true
-custom_css = ["css/index.css"]
 pygmentsUseClasses=true
 
 [params]
@@ -16,8 +15,6 @@ profile_image = "/images/profile.jpg"
 github = "https://github.com/adamkali"
 email = "adam.kalilarosa@proton.me"
 linkedin = "https://linkedin.com/in/yourusername"
-
-
 
 # Taxonomy configuration
 [taxonomies]
@@ -77,3 +74,21 @@ name = "Linkedin"
 title = "linkedin"
 url = "https://github.com/adamkali"
 weight = 5
+
+[build]
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/notwatching/hugo_stats\.json'
+target = 'css'
+[[build.cachebusters]]
+source = '(postcss|tailwind)\.config\.js'
+target = 'css'
+[module]
+[[module.mounts]]
+source = 'assets'
+target = 'assets'
+[[module.mounts]]
+disableWatch = true
+source = 'hugo_stats.json'
+target = 'assets/notwatching/hugo_stats.json'

@@ -39,6 +39,11 @@
         </ol>
       </div>
     </header>
+    {{ if isset .Params "lead" }}
+    <section class="text-center">
+        <span class="italic text-emerald-300">{{ .Params.lead }}</span>
+    </section>
+    {{ end }}
     <article>
       {{ .Content }}
     </article>

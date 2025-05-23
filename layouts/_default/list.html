@@ -1,40 +1,50 @@
 {{ define "main" }}
-  <div class="">
-    <!-- <h1>{{ .Title }}</h1> -->
+<div class="space-y-8">
     <div class="">
-      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+        {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
     </div>
+    <div class="flex flex-1 justify-center text-5xl font-semibold text-emerald-300 text-center">{{ .Title }}</div>
     {{ .Content }}
     {{ $paginator := .Paginate (where .Data.Pages "Type" "posts") }}
     {{ range $paginator.Pages }}
-    <div class="">
-      {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-      {{ $dateHuman := .Date | time.Format ":date_long" }}
-      <time class="" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-      <h2 class=""><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ if .Site.Params.showPostsSummary }}
-      <p class="">
-        {{ .Summary }}
-      </p>
-      {{ end }}
-    </div>
+    <a href="{{ .RelPermalink }}" class="flex flex-col space-y-4 text-xl text-center
+                                        bg-slate-700 rounded mx-12 px-6 py-2 shadow-md
+                                        shadow-slate-800 transform duration-150 hover:shadow-lg
+                                        hover:shadow-slate-900 hover:-translate-y-0.5">
+        {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+        {{ $dateHuman := .Date | time.Format ":date_long" }}
+        <div class="flex flex-row space-x-8 align-top">
+            <time class="text-sm text-semibold text-cyan-500" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+            <h2 class="font-bold">{{ .LinkTitle }}</h2>
+        </div>
+        {{ if .Site.Params.showPostsSummary }}
+        <p class="">
+            {{ .Summary }}
+        </p>
+        {{ end }}
+        <div class="flex flex-row space-x-2">
+            {{ range .Params.categories }}
+            <span class="bg-cyan-400 rounded-full italic text-sm text-slate-900 px-3"># {{ . }}</span>
+            {{ end }}
+        </div>
+    </a>
     {{ end }}
     {{ $paginator := .Paginator }}
     {{ if gt $paginator.TotalPages 1 }}
     <nav aria-label="">
-      <ol class="">
-        {{ if $paginator.HasPrev }}
-        <li class="">
-          <a href="{{ $paginator.Prev.URL }}">← back</a>
-        </li>
-        {{ end }}
-        {{ if $paginator.HasNext }}
-        <li class="">
-          <a href="{{ $paginator.Next.URL }}">next →</a>
-        </li>
-        {{ end }}
-      </ol>
+        <ol class="">
+            {{ if $paginator.HasPrev }}
+            <li class="">
+                <a href="{{ $paginator.Prev.URL }}">← back</a>
+            </li>
+            {{ end }}
+            {{ if $paginator.HasNext }}
+            <li class="">
+                <a href="{{ $paginator.Next.URL }}">next →</a>
+            </li>
+            {{ end }}
+        </ol>
     </nav>
     {{ end }}
-  </div>
+</div>
 {{ end }}
