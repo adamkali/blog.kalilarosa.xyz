@@ -15,6 +15,7 @@ profile_image = "/images/profile.jpg"
 github = "https://github.com/adamkali"
 email = "adam.kalilarosa@proton.me"
 linkedin = "https://linkedin.com/in/yourusername"
+copyright="Adam Kalinowski"
 
 # Taxonomy configuration
 [taxonomies]
