@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+  {{ partialCached "css.html" . }}
+</head>
+{{ $theme := "dark" }}
+{{- with .Site.Params.theme }}
+  {{ $theme = . }}
+{{- end }}
+<body class="bg-slate-600 text-slate-300 h-full text-lg" >
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ if .Param "math" }}
+    {{ partial "math.html" . }}
+  {{ end }}
+  {{- if eq $theme "auto" }}
+  <script>
+    function detectThemePreferences() {
+      let themeClasses = ["text-dark"];
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          themeClasses = ["text-light", "dark"];
+      }
+      document.body.classList.add(themeClasses);
+    }
+
+    detectThemePreferences();
+  </script>
+  {{- end }}
+</body>
+</html>
