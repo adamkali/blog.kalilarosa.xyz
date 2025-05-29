@@ -1,6 +1,5 @@
 baseURL = 'blog.kalilarosa.xyz'
 languageCode = 'en-us'
-theme = ""
 title = 'Jus a silly little blog.'
 # URL handling
 relativeURLs = true

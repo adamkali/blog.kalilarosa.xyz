@@ -27,14 +27,14 @@ So I did the only thing that I could do. I asked someone what I should do. I ask
 
 > If you want to people to think you are the smartest in the room; make everyone else in the feel smarter. If you want everyone to think you are dumb; make them feel dumb.
 
-There was something about that quote that resonated with me. My late grandfather, Zdizlaw Szewcyck, my dad would always said that he could make anyone feel smart. And if I wanted to someone to put me on their team, I should try to show them that I would need to show the interviewer not some polished version of myself. I had to make them see that I could be a team player that would make them proud. 
+There was something about that quote that resonated with me. My late grandfather Zdzislaw Szewczyk, my dad would always said that he could make anyone feel smart. And if I wanted to someone to put me on their team, I should try to show them that I would need to show the interviewer not some polished version of myself. I had to make them see that I could be a team player that would make them proud. 
 
 So, when I interviewed at Legal Automation Systems, I shot my shot and decided to sell who I was. I knocked out the phone interview easy as pie. I knew how to do the coding project as if it was second nature. And when the in-person interview came along, I defended the project and had a blast with the team. 
 
 ## The Waiting Game
 One day went by and I was working a 4 shift as a tutor, and then an 8 hour shift as a home help aide. No call. Next day a twelve hour shift with a 98 year old man named Jack Herman. I told him what was happening, and to be honest with you I had know idea if he was listening. Yet this time he was lucid and told me that he was sure that I was going to get the job. a couple more days of 12 hour shifts with Jack and I was starting to loose hope. Infact, I was scheduling a call with another interviewer. I got out of a 4 hour shift with tutoring, and then was running home for lunch before I had to get to another 12 hour shift with Jack and he had been particularly bad that week. And the interview that i was supposed to have the next day was postponned. 
 
-I got a phone call and was about ready to bite off the had of who ever called. I did not even read the call ID. I was such a zombie that I answered the phone with "What's up". Brett my interviewer from Legal Automation Systems, called to offer me the job. I nearly broke down in tears: *I was now a Software Engineer!*
+I got a phone call and was about ready to bite off the head of who ever called. I did not even read the call ID. I was such a zombie that I answered the phone with "What's up". Brett my interviewer from Legal Automation Systems, called to offer me the job. I nearly broke down in tears: *I was now a Software Engineer!*
 
 ## Where Am I at now 
 
