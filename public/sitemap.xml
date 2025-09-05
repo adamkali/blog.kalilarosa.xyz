@@ -2,58 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/</loc>
+    <loc>blog.kalilarosa.xyz/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>blog.kalilarosa.xyz/categories/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/config/</loc>
+    <loc>blog.kalilarosa.xyz/categories/config/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/lua/</loc>
+    <loc>blog.kalilarosa.xyz/categories/lua/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/neorg/</loc>
+    <loc>blog.kalilarosa.xyz/categories/neorg/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/neovim/</loc>
+    <loc>blog.kalilarosa.xyz/categories/neovim/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/configs/norbsidian/</loc>
+    <loc>blog.kalilarosa.xyz/configs/norbsidian/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/recipe/</loc>
+    <loc>blog.kalilarosa.xyz/categories/recipe/</loc>
     <lastmod>2025-09-05T08:57:56-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/blog/</loc>
+    <loc>blog.kalilarosa.xyz/categories/blog/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>blog.kalilarosa.xyz/posts/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/dotfile/</loc>
+    <loc>blog.kalilarosa.xyz/categories/dotfile/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/hugo/</loc>
+    <loc>blog.kalilarosa.xyz/categories/hugo/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/neorg-is-changing-the-way-i-think/</loc>
+    <loc>blog.kalilarosa.xyz/posts/neorg-is-changing-the-way-i-think/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/organization/</loc>
+    <loc>blog.kalilarosa.xyz/categories/organization/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/shell/</loc>
+    <loc>blog.kalilarosa.xyz/categories/shell/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/configs/starship/</loc>
+    <loc>blog.kalilarosa.xyz/configs/starship/</loc>
     <lastmod>2025-04-05T19:29:23-05:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/configs/</loc>
+    <loc>blog.kalilarosa.xyz/configs/</loc>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>blog.kalilarosa.xyz/about/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>blog.kalilarosa.xyz/tags/</loc>
   </url>
 </urlset>
