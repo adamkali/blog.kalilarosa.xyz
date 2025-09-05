@@ -9,7 +9,6 @@ pygmentsUseClasses = true
 # Performance optimizations
 enableRobotsTXT = true
 enableGitInfo = true
-minify = true
 
 [minify]
   disableCSS = false
