@@ -17,9 +17,9 @@
     {{ partial "math.html" . }}
   {{ end }}
   
-  <!-- Three.js for synthwave background - Load asynchronously for performance -->
-  <script async src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <script async src="/synthwave-shader.js"></script>
+  <!-- Three.js for synthwave background - Load synchronously to ensure proper order -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/synthwave-shader.js"></script>
   
   {{- if eq $theme "auto" }}
   <script>

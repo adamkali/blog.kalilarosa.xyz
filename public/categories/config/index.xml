@@ -1,26 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Config on Yet another trashy dev blog</title>
-    <link>blog.kalilarosa.xyz/categories/config/</link>
-    <description>Recent content in Config on Yet another trashy dev blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 05 Sep 2025 08:57:56 -0500</lastBuildDate>
-    <atom:link href="blog.kalilarosa.xyz/categories/config/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>norbsidian</title>
-      <link>blog.kalilarosa.xyz/configs/norbsidian/</link>
-      <pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/configs/norbsidian/</guid>
-      <description>&lt;h1 id=&#34;this-is-some-expert-tier-exporting&#34;&gt;This Is some expert tier exporting&lt;/h1&gt;&#xA;&lt;p&gt;So one thing I had a problem with is getting my neorg notes to export to obsidian without manually having to specify the directory that it will be exported to. So here is a recipe for a script that I wrote for my neovim config that does just that.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pragma&#34;&gt;Pragma&lt;/h2&gt;&#xA;&lt;p&gt;We start offcreate some tables and load in some libraries&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;norbsidian&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;builtins&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;telescope.builtin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pickers&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;telescope.pickers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;i-am-now-going-to-define-this-here-class-and-function&#34;&gt;I am now going to define this here class and function&lt;/h2&gt;&#xA;&lt;p&gt;Now the NorbOptions class is a secret mousekatool to use later more on that later, but the norbsidian_export_template function just takes the inputs and gives us a pure function that will always generate the proper export.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Starship Config</title>
-      <link>blog.kalilarosa.xyz/configs/starship/</link>
-      <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>blog.kalilarosa.xyz/configs/starship/</guid>
-      <description>&lt;h1 id=&#34;starship&#34;&gt;Starship&lt;/h1&gt;&#xA;&lt;p&gt;&amp;ldquo;The minimal, blazing-fast, and infinitely customizable prompt for any shell!&amp;rdquo;.&#xA;I love this program. It creates great prompts for me to be able to create a truly unique to me experience that I really enjoy!&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-schema&#34;&gt;The schema&lt;/h2&gt;&#xA;&lt;p&gt;This will allow you to get some vscode auto completions. I dont know how to get this to do the thing with neovim.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;$schema&amp;#34;&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;https://starship.rs/config-schema.json&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;now-for-the-format&#34;&gt;Now for the format&lt;/h2&gt;&#xA;&lt;p&gt;Now I want to try a two line layout to be honest.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Config on Yet another trashy dev blog</title><link>blog.kalilarosa.xyz/categories/config/</link><description>Recent content in Config on Yet another trashy dev blog</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 05 Sep 2025 08:57:56 -0500</lastBuildDate><atom:link href="blog.kalilarosa.xyz/categories/config/index.xml" rel="self" type="application/rss+xml"/><item><title>norbsidian</title><link>blog.kalilarosa.xyz/configs/norbsidian/</link><pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate><guid>blog.kalilarosa.xyz/configs/norbsidian/</guid><description>&lt;h1 id="this-is-some-expert-tier-exporting">This Is some expert tier exporting&lt;/h1>
+&lt;p>So one thing I had a problem with is getting my neorg notes to export to obsidian without manually having to specify the directory that it will be exported to. So here is a recipe for a script that I wrote for my neovim config that does just that.&lt;/p>
+&lt;h2 id="pragma">Pragma&lt;/h2>
+&lt;p>We start offcreate some tables and load in some libraries&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-lua" data-lang="lua">&lt;span class="line">&lt;span class="cl">&lt;span class="kd">local&lt;/span> &lt;span class="n">norbsidian&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">{}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">local&lt;/span> &lt;span class="n">builtins&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;telescope.builtin&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kd">local&lt;/span> &lt;span class="n">pickers&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">require&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;telescope.pickers&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="i-am-now-going-to-define-this-here-class-and-function">I am now going to define this here class and function&lt;/h2>
+&lt;p>Now the NorbOptions class is a secret mousekatool to use later more on that later, but the norbsidian_export_template function just takes the inputs and gives us a pure function that will always generate the proper export.&lt;/p></description></item><item><title>Starship Config</title><link>blog.kalilarosa.xyz/configs/starship/</link><pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate><guid>blog.kalilarosa.xyz/configs/starship/</guid><description>&lt;h1 id="starship">Starship&lt;/h1>
+&lt;p>&amp;ldquo;The minimal, blazing-fast, and infinitely customizable prompt for any shell!&amp;rdquo;.
+I love this program. It creates great prompts for me to be able to create a truly unique to me experience that I really enjoy!&lt;/p>
+&lt;h2 id="the-schema">The schema&lt;/h2>
+&lt;p>This will allow you to get some vscode auto completions. I dont know how to get this to do the thing with neovim.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="s2">&amp;#34;$schema&amp;#34;&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s1">&amp;#39;https://starship.rs/config-schema.json&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="now-for-the-format">Now for the format&lt;/h2>
+&lt;p>Now I want to try a two line layout to be honest.&lt;/p></description></item></channel></rss>
