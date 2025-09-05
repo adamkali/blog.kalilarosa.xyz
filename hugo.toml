@@ -4,7 +4,41 @@ title = 'Yet another trashy dev blog'
 # URL handling
 relativeURLs = true
 canonifyURLs = true
-pygmentsUseClasses=true
+pygmentsUseClasses = true
+
+# Performance optimizations
+enableRobotsTXT = true
+enableGitInfo = true
+minify = true
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+
+[minify.tdewolff.html]
+  keepDefaultAttrVals = false
+  keepDocumentTags = true
+  keepEndTags = true
+  keepQuotes = false
+  keepWhitespace = false
+
+[caches]
+  [caches.getjson]
+    dir = ':cacheDir/:project'
+    maxAge = '10m'
+  [caches.getcsv]
+    dir = ':cacheDir/:project'
+    maxAge = '10m'
+  [caches.images]
+    dir = ':resourceDir/_gen'
+    maxAge = '720h'
+  [caches.assets]
+    dir = ':resourceDir/_gen'
+    maxAge = '720h'
 
 [params]
 name = "Adam Kalinowski"

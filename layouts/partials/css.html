@@ -3,13 +3,15 @@
     {{ $opts := dict
       "minify" (not hugo.IsDevelopment)
       "inlineImports" true
+      "autoprefixer" true
     }}
-    {{ with . | css.TailwindCSS $opts }}
+    {{ with . | css.TailwindCSS $opts | minify }}
       {{ if hugo.IsDevelopment }}
-        <link rel="stylesheet" href="{{ .RelPermalink }}">
+        <link rel="stylesheet" href="{{ .Permalink | relURL }}">
       {{ else }}
         {{ with . | fingerprint }}
-          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+          <link rel="preload" href="{{ .Permalink | relURL }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+          <noscript><link rel="stylesheet" href="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous"></noscript>
         {{ end }}
       {{ end }}
     {{ end }}

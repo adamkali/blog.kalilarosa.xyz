@@ -4,7 +4,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="shortcut icon" type="image/png" href="{{ absURL "favicon.ico" }}" />
 
-<!-- Victor Mono Nerd Font -->
+<!-- Victor Mono Nerd Font - Preload for performance -->
+<link rel="preload" href="/fonts/VictorMonoNerdFontPropo-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="/fonts/VictorMonoNerdFont-Regular.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="stylesheet" href="/fonts/victor-mono-nerd-font.css">
 
 {{ $styles := resources.Get "/css/main.css"  }}
