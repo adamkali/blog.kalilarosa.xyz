@@ -1,26 +1,106 @@
 @import "tailwindcss";
 @source "hugo_stats.json";
 
+/* VaporLush Color Variables */
+:root {
+    --vp-bg: #0e102d;
+    --vp-fg: #079ef0;
+    --vp-bg-highlight: #0a2846;
+    --vp-fg-highlight: #5885ed;
+    --vp-comment: #8da0b8;
+    --vp-primary-0: #0700de;
+    --vp-primary-1: #0b03fc;
+    --vp-primary-2: #352ff5;
+    --vp-primary-3: #4e47ff;
+    --vp-secondary-0: #b50465;
+    --vp-secondary-1: #e60580;
+    --vp-secondary-2: #fa34a1;
+    --vp-secondary-3: #fc65b8;
+    --vp-tertiary-0: #3f10cc;
+    --vp-tertiary-1: #6439e6;
+    --vp-tertiary-2: #8864f5;
+    --vp-tertiary-3: #af95fc;
+    --vp-quartary-0: #fc5e03;
+    --vp-quartary-1: #fc853f;
+    --vp-quartary-2: #f59b67;
+    --vp-quartary-3: #ffb68c;
+}
+
+/* Cyberpunk Headers - Toned Down */
 h1 {
-    @apply bg-emerald-300 rounded-full text-center text-4xl px-6 py-2 text-slate-800 my-6 font-bold
+    @apply text-left text-3xl px-4 py-2 my-4 font-bold transition-all duration-300 relative;
+    color: var(--vp-fg);
+    text-shadow: 0 0 10px rgba(7, 158, 240, 0.5);
+    border-left: 4px solid var(--vp-primary-2);
+    background: linear-gradient(90deg, rgba(53, 47, 245, 0.1) 0%, transparent 100%);
+}
+
+h1::before {
+    content: '> ';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--vp-secondary-2);
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(250, 52, 161, 0.8);
+    animation: terminal-blink 2s infinite;
+}
+
+@keyframes terminal-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
 }
 
 h2 {
-    @apply bg-cyan-500 rounded-full text-center text-2xl px-6 py-2 text-slate-800 my-4 font-bold
+    @apply text-left text-xl px-3 py-1 my-3 font-semibold transition-all duration-200 relative;
+    color: var(--vp-tertiary-3);
+    text-shadow: 0 0 8px rgba(175, 149, 252, 0.4);
+    border-left: 2px solid var(--vp-secondary-2);
+}
+
+h2::before {
+    content: '>> ';
+    position: absolute;
+    left: -24px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--vp-tertiary-2);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    text-shadow: 0 0 8px rgba(136, 100, 245, 0.6);
 }
 
 blockquote {
-    @apply bg-slate-400 rounded text-justify px-3 py-2 text-slate-800 
+    background: linear-gradient(135deg, rgba(63, 16, 204, 0.1), rgba(14, 16, 45, 0.8));
+    border-left: 4px solid var(--vp-tertiary-1);
+    color: var(--vp-comment);
+    @apply backdrop-blur-sm rounded text-justify px-4 py-3 shadow-lg transition-all duration-300;
+    box-shadow: 
+        0 0 20px rgba(100, 57, 230, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 p {
     a {
-        @apply text-pink-300
+        color: var(--vp-secondary-2);
+        text-shadow: 0 0 6px rgba(250, 52, 161, 0.4);
+        @apply hover:brightness-110 transition-all duration-200 underline decoration-2 underline-offset-2;
+        text-decoration-color: var(--vp-secondary-3);
+    }
+    
+    a:hover {
+        color: var(--vp-secondary-3);
+        text-shadow: 0 0 10px rgba(252, 101, 184, 0.6);
+        text-decoration-color: var(--vp-secondary-2);
     }
 }
 
 .dotfile {
-    @apply text-pink-300
+    color: var(--vp-quartary-2);
+    text-shadow: 0 0 6px rgba(245, 155, 103, 0.4);
+    @apply hover:brightness-110 transition-all duration-200;
 }
 
 /* Generated using: hugo gen chromastyles --style=nord */
@@ -456,3 +536,643 @@ p {
 
 /* TextWhitespace */
 .chroma .w {}
+
+/* VaporLush Cyberpunk Enhancement Classes */
+
+/* Enhanced code blocks with cyberpunk styling */
+.chroma {
+    @apply backdrop-blur-sm transition-all duration-300;
+    background: linear-gradient(135deg, rgba(14, 16, 45, 0.9), rgba(10, 40, 70, 0.7));
+    border: 1px solid var(--vp-primary-2);
+    border-radius: 8px;
+    box-shadow: 
+        0 0 20px rgba(53, 47, 245, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Cyberpunk card styling for content containers */
+.blog-card {
+    @apply backdrop-blur-md rounded-lg transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(135deg, 
+        rgba(14, 16, 45, 0.8) 0%, 
+        rgba(10, 40, 70, 0.6) 50%, 
+        rgba(63, 16, 204, 0.1) 100%);
+    border: 1px solid rgba(53, 47, 245, 0.3);
+    box-shadow: 
+        0 8px 32px rgba(53, 47, 245, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--vp-secondary-2);
+    box-shadow: 
+        0 16px 40px rgba(250, 52, 161, 0.3),
+        0 0 30px rgba(53, 47, 245, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(250, 52, 161, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.blog-card:hover::before {
+    left: 100%;
+}
+
+/* Cyberpunk navigation styling */
+.glass-nav {
+    @apply backdrop-blur-md transition-all duration-300;
+    background: linear-gradient(135deg, rgba(14, 16, 45, 0.95), rgba(10, 40, 70, 0.8));
+    border: 1px solid rgba(88, 133, 237, 0.3);
+    border-radius: 8px;
+    box-shadow: 
+        0 8px 32px rgba(7, 158, 240, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Cyberpunk button styling */
+.btn-primary {
+    @apply font-semibold px-6 py-3 rounded transition-all duration-300 relative overflow-hidden;
+    background: linear-gradient(135deg, var(--vp-secondary-0), var(--vp-secondary-2));
+    color: white;
+    border: 1px solid var(--vp-secondary-3);
+    box-shadow: 
+        0 0 20px rgba(230, 5, 128, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 0 10px rgba(252, 101, 184, 0.5);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 25px rgba(230, 5, 128, 0.6),
+        0 0 30px rgba(250, 52, 161, 0.5);
+}
+
+.btn-secondary {
+    @apply px-4 py-2 rounded transition-all duration-300;
+    background: linear-gradient(135deg, rgba(14, 16, 45, 0.8), rgba(63, 16, 204, 0.6));
+    color: var(--vp-comment);
+    border: 1px solid var(--vp-tertiary-2);
+    box-shadow: 0 0 15px rgba(136, 100, 245, 0.3);
+}
+
+.btn-secondary:hover {
+    color: var(--vp-tertiary-3);
+    border-color: var(--vp-tertiary-3);
+    box-shadow: 0 0 20px rgba(175, 149, 252, 0.4);
+}
+
+/* Cyberpunk floating effect */
+.float-effect {
+    @apply transform transition-all duration-300;
+}
+
+.float-effect:hover {
+    transform: translateY(-6px);
+    filter: drop-shadow(0 10px 20px rgba(53, 47, 245, 0.4));
+}
+
+/* VaporLush text glow effects */
+.text-glow-primary {
+    color: var(--vp-fg);
+    text-shadow: 0 0 10px rgba(7, 158, 240, 0.6);
+}
+
+.text-glow-secondary {
+    color: var(--vp-secondary-2);
+    text-shadow: 0 0 10px rgba(250, 52, 161, 0.6);
+}
+
+.text-glow-tertiary {
+    color: var(--vp-tertiary-3);
+    text-shadow: 0 0 10px rgba(175, 149, 252, 0.6);
+}
+
+.text-glow-quartary {
+    color: var(--vp-quartary-2);
+    text-shadow: 0 0 10px rgba(245, 155, 103, 0.6);
+}
+
+/* Cyberpunk focus states */
+*:focus {
+    @apply outline-none;
+    box-shadow: 0 0 0 2px var(--vp-secondary-2), 0 0 10px rgba(250, 52, 161, 0.5);
+}
+
+/* Synthwave Shader Background Support */
+body {
+    background: transparent !important;
+    color: var(--vp-comment) !important;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Fallback gradient for when shader doesn't load */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: linear-gradient(135deg, var(--vp-bg) 0%, var(--vp-bg-highlight) 50%, var(--vp-bg) 100%);
+}
+
+/* Nerd Font Classes */
+.nf {
+    font-family: 'Victor Mono Nerd Font', 'Victor Mono Nerd Font Propo', monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* VaporLush Code Block Styling */
+pre {
+    font-family: 'Victor Mono Nerd Font Propo', 'Victor Mono Nerd Font', monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    background: linear-gradient(135deg, rgba(14, 16, 45, 0.95), rgba(10, 40, 70, 0.8));
+    border: 1px solid rgba(53, 47, 245, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    max-height: 500px;
+    box-shadow: 
+        0 8px 32px rgba(7, 158, 240, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+code {
+    font-family: 'Victor Mono Nerd Font Propo', 'Victor Mono Nerd Font', monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    background: rgba(53, 47, 245, 0.2);
+    color: var(--vp-fg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: var(--vp-fg);
+}
+
+.mono {
+    font-family: 'Victor Mono Nerd Font Propo', 'Victor Mono Nerd Font', monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* VaporLush Syntax Highlighting */
+.highlight {
+    background: transparent;
+}
+
+/* Base syntax colors using VaporLush Vapor scheme */
+.highlight .c,    /* Comment */
+.highlight .cm,   /* Comment.Multiline */
+.highlight .cp,   /* Comment.Preproc */
+.highlight .c1,   /* Comment.Single */
+.highlight .cs {  /* Comment.Special */
+    color: #8da0b8;
+    font-style: italic;
+}
+
+.highlight .k,    /* Keyword */
+.highlight .kc,   /* Keyword.Constant */
+.highlight .kd,   /* Keyword.Declaration */
+.highlight .kn,   /* Keyword.Namespace */
+.highlight .kp,   /* Keyword.Pseudo */
+.highlight .kr,   /* Keyword.Reserved */
+.highlight .kt {  /* Keyword.Type */
+    color: #352ff5;
+    font-weight: bold;
+}
+
+.highlight .na,   /* Name.Attribute */
+.highlight .nb,   /* Name.Builtin */
+.highlight .bp {  /* Name.Builtin.Pseudo */
+    color: #6439e6;
+    font-style: italic;
+}
+
+.highlight .nf,   /* Name.Function */
+.highlight .fm {  /* Name.Function.Magic */
+    color: #8864f5;
+    font-style: italic;
+}
+
+.highlight .nc,   /* Name.Class */
+.highlight .ne,   /* Name.Exception */
+.highlight .nn {  /* Name.Namespace */
+    color: #af95fc;
+    font-weight: bold;
+}
+
+.highlight .nv,   /* Name.Variable */
+.highlight .vc,   /* Name.Variable.Class */
+.highlight .vg,   /* Name.Variable.Global */
+.highlight .vi {  /* Name.Variable.Instance */
+    color: #8864f5;
+}
+
+.highlight .s,    /* Literal.String */
+.highlight .sb,   /* Literal.String.Backtick */
+.highlight .sc,   /* Literal.String.Char */
+.highlight .sd,   /* Literal.String.Doc */
+.highlight .s2,   /* Literal.String.Double */
+.highlight .se,   /* Literal.String.Escape */
+.highlight .sh,   /* Literal.String.Heredoc */
+.highlight .si,   /* Literal.String.Interpol */
+.highlight .sx,   /* Literal.String.Other */
+.highlight .sr,   /* Literal.String.Regex */
+.highlight .s1,   /* Literal.String.Single */
+.highlight .ss {  /* Literal.String.Symbol */
+    color: #00ccaa;
+}
+
+.highlight .se {  /* String.Escape */
+    color: #3f10cc;
+    font-weight: bold;
+}
+
+.highlight .sr {  /* String.Regex */
+    color: #fc5e03;
+}
+
+.highlight .m,    /* Literal.Number */
+.highlight .mb,   /* Literal.Number.Bin */
+.highlight .mf,   /* Literal.Number.Float */
+.highlight .mh,   /* Literal.Number.Hex */
+.highlight .mi,   /* Literal.Number.Integer */
+.highlight .mo {  /* Literal.Number.Oct */
+    color: #fc853f;
+}
+
+.highlight .o,    /* Operator */
+.highlight .ow {  /* Operator.Word */
+    color: #0b03fc;
+    font-weight: bold;
+}
+
+.highlight .p,    /* Punctuation */
+.highlight .py {  /* Punctuation.Yield */
+    color: #079ef0;
+}
+
+.highlight .gd {  /* Generic.Deleted */
+    color: #c71e26;
+    background-color: rgba(199, 30, 38, 0.1);
+}
+
+.highlight .gi {  /* Generic.Inserted */
+    color: #00ccaa;
+    background-color: rgba(0, 204, 170, 0.1);
+}
+
+.highlight .gh {  /* Generic.Heading */
+    color: #fa34a1;
+    font-weight: bold;
+}
+
+.highlight .gu {  /* Generic.Subheading */
+    color: #fc65b8;
+    font-weight: bold;
+}
+
+.highlight .ge {  /* Generic.Emph */
+    font-style: italic;
+}
+
+.highlight .gs {  /* Generic.Strong */
+    font-weight: bold;
+}
+
+/* Language-specific tweaks */
+.highlight .language-toml .kt { /* TOML keys */
+    color: #8864f5;
+}
+
+.highlight .language-yaml .na { /* YAML keys */
+    color: #fa34a1;
+}
+
+.highlight .language-json .na { /* JSON keys */
+    color: #fa34a1;
+}
+
+/* Line numbers */
+.highlight .ln,
+.highlight .lineno {
+    color: #8da0b8;
+    opacity: 0.6;
+    user-select: none;
+    margin-right: 1rem;
+}
+
+/* Make code blocks more cyberpunk */
+pre::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: rgba(14, 16, 45, 0.3);
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #fa34a1, #fc65b8);
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #fc65b8, #fa34a1);
+}
+
+/* Strict monospace class for when you need true monospace */
+.mono-strict {
+    font-family: 'Victor Mono Nerd Font Mono', monospace;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+/* Make sure Nerd Font icons render properly */
+.nerd-icon {
+    font-family: 'Victor Mono Nerd Font', 'Victor Mono Nerd Font Propo', monospace;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global VaporLush Background Enforcement */
+html {
+    background: var(--vp-bg) !important;
+    min-height: 100vh;
+}
+
+main {
+    background: transparent !important;
+    min-height: 100vh;
+}
+
+/* Force all page containers to have transparent backgrounds and proper colors */
+main > div, 
+.space-y-8, 
+article:not(.blog-card),
+section {
+    background: transparent !important;
+    color: var(--vp-comment) !important;
+}
+
+/* Ensure all text inherits VaporLush colors */
+p, span, div, li, td, th {
+    color: inherit;
+}
+
+/* Override any Tailwind color classes that might interfere */
+.text-slate-300,
+.text-slate-200,
+.text-slate-400 {
+    color: var(--vp-comment) !important;
+}
+
+/* Responsive design for 2/3 layout */
+@media (max-width: 768px) {
+    .w-2\/3 {
+        width: 95% !important;
+    }
+    
+    .max-w-4xl {
+        max-width: none !important;
+    }
+    
+    h1 {
+        font-size: 1.5rem !important;
+        padding: 0.75rem 1rem !important;
+    }
+    
+    h2 {
+        font-size: 1.25rem !important;
+        padding: 0.5rem 0.75rem !important;
+    }
+    
+    .blog-card {
+        margin: 0 0.5rem !important;
+        padding: 1rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .w-2\/3 {
+        width: 98% !important;
+    }
+    
+    .space-y-8 > * + * {
+        margin-top: 1rem !important;
+    }
+    
+    .text-xl {
+        font-size: 1rem !important;
+    }
+}
+
+/* VaporLush Cyberpunk Background */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(53, 47, 245, 0.08) 0%, transparent 35%),
+        radial-gradient(circle at 80% 80%, rgba(250, 52, 161, 0.06) 0%, transparent 35%),
+        radial-gradient(circle at 80% 20%, rgba(100, 57, 230, 0.05) 0%, transparent 30%),
+        radial-gradient(circle at 20% 80%, rgba(7, 158, 240, 0.04) 0%, transparent 30%),
+        linear-gradient(135deg, rgba(14, 16, 45, 0.1) 0%, rgba(10, 40, 70, 0.05) 50%, transparent 100%);
+    pointer-events: none;
+    z-index: -1;
+    animation: cyberpunk-pulse 10s ease-in-out infinite alternate;
+}
+
+@keyframes cyberpunk-pulse {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Cyberpunk grid overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(53, 47, 245, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(53, 47, 245, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* VaporLush scrollbar styling */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--vp-bg);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--vp-primary-2), var(--vp-secondary-2));
+    border-radius: 6px;
+    border: 1px solid var(--vp-bg-highlight);
+    box-shadow: 0 0 10px rgba(53, 47, 245, 0.3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, var(--vp-secondary-2), var(--vp-tertiary-2));
+    box-shadow: 0 0 15px rgba(250, 52, 161, 0.5);
+}
+
+/* Cyberpunk selection styling */
+::selection {
+    background: rgba(250, 52, 161, 0.3);
+    color: var(--vp-fg);
+    text-shadow: 0 0 10px rgba(7, 158, 240, 0.8);
+}
+
+/* Cyberpunk Portrait Styling */
+.portrait-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cyberpunk-portrait {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid var(--vp-primary-2);
+    box-shadow: 
+        0 0 20px rgba(53, 47, 245, 0.4),
+        0 0 40px rgba(250, 52, 161, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.cyberpunk-portrait:hover {
+    transform: scale(1.05);
+    border-color: var(--vp-secondary-2);
+    box-shadow: 
+        0 0 30px rgba(250, 52, 161, 0.6),
+        0 0 50px rgba(53, 47, 245, 0.3),
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.portrait-container::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border-radius: 16px;
+    background: linear-gradient(45deg, 
+        var(--vp-primary-2), 
+        var(--vp-secondary-2), 
+        var(--vp-tertiary-2), 
+        var(--vp-quartary-2));
+    z-index: -1;
+    opacity: 0.6;
+    animation: cyberpunk-border-flow 3s linear infinite;
+}
+
+.portrait-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 12px;
+    background: linear-gradient(135deg, 
+        rgba(53, 47, 245, 0.1) 0%, 
+        transparent 30%, 
+        rgba(250, 52, 161, 0.1) 100%);
+    pointer-events: none;
+    z-index: 3;
+}
+
+@keyframes cyberpunk-border-flow {
+    0% {
+        background: linear-gradient(45deg, 
+            var(--vp-primary-2), 
+            var(--vp-secondary-2), 
+            var(--vp-tertiary-2), 
+            var(--vp-quartary-2));
+    }
+    25% {
+        background: linear-gradient(45deg, 
+            var(--vp-quartary-2), 
+            var(--vp-primary-2), 
+            var(--vp-secondary-2), 
+            var(--vp-tertiary-2));
+    }
+    50% {
+        background: linear-gradient(45deg, 
+            var(--vp-tertiary-2), 
+            var(--vp-quartary-2), 
+            var(--vp-primary-2), 
+            var(--vp-secondary-2));
+    }
+    75% {
+        background: linear-gradient(45deg, 
+            var(--vp-secondary-2), 
+            var(--vp-tertiary-2), 
+            var(--vp-quartary-2), 
+            var(--vp-primary-2));
+    }
+    100% {
+        background: linear-gradient(45deg, 
+            var(--vp-primary-2), 
+            var(--vp-secondary-2), 
+            var(--vp-tertiary-2), 
+            var(--vp-quartary-2));
+    }
+}
+
+/* Mobile responsive adjustments for portrait */
+@media (max-width: 768px) {
+    .cyberpunk-portrait {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .flex-col.md\\:flex-row {
+        text-align: center;
+    }
+}

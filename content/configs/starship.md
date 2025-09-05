@@ -2,9 +2,10 @@
 title = "Starship Config"
 description = "Check out how I configured my Starship config!"
 authors = "Adam Kalinowski"
-categories = [ "Shell" ]
-date = "2025-04-05T09:28:54-0500"
-lastmod = "2025-04-05T19:29:23-0500"
+categories = [ "Shell", "Config", "Dotfile" ]
+created = "2025-04-05T09:28:54-0500"
+updated = "2025-04-05T19:29:23-0500"
+download = "starship.toml"
 +++
 
 # Starship

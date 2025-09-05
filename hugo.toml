@@ -1,6 +1,6 @@
 baseURL = 'blog.kalilarosa.xyz'
 languageCode = 'en-us'
-title = 'Jus a silly little blog.'
+title = 'Yet another trashy dev blog'
 # URL handling
 relativeURLs = true
 canonifyURLs = true
@@ -57,23 +57,41 @@ title = "posts"
 url = "/posts"
 weight = 2
 [[menu.main]]
+identifier = "configs"
+name = "Configs"
+title = "Configs"
+url = "/configs"
+weight = 3
+[[menu.main]]
 identifier = "about"
 name = "About"
 title = "About"
 url = "/about"
-weight = 3
+weight = 4
 [[menu.main]]
 identifier = "github"
 name = "Github"
 title = "GitHub"
 url = "https://github.com/adamkali"
-weight = 4
+weight = 5
 [[menu.main]]
 identifier = "linkedin"
 name = "Linkedin"
 title = "linkedin"
-url = "https://github.com/adamkali"
-weight = 5
+url = "www.linkedin.com/in/adam-kalinowski-a8209a1b1"
+weight = 6
+[[menu.main]]
+identifier = "rss"
+name = "RSS"
+title = "RSS Feed"
+url = "/index.xml"
+weight = 7
+
+# Front matter configuration for Neorg compatibility
+[frontmatter]
+date = ['created', 'date', 'publishDate', 'lastmod']
+lastmod = ['updated', 'lastmod', 'modified']
+publishDate = ['created', 'date', 'publishDate']
 
 [build]
 [build.buildStats]

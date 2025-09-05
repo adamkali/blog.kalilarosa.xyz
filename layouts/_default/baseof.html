@@ -8,7 +8,7 @@
 {{- with .Site.Params.theme }}
   {{ $theme = . }}
 {{- end }}
-<body class="bg-slate-600 text-slate-300 h-full text-lg" >
+<body class="min-h-screen text-lg relative">
   <main>
     {{ block "main" . }}{{ end }}
   </main>
@@ -16,6 +16,11 @@
   {{ if .Param "math" }}
     {{ partial "math.html" . }}
   {{ end }}
+  
+  <!-- Three.js for synthwave background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="/synthwave-shader.js"></script>
+  
   {{- if eq $theme "auto" }}
   <script>
     function detectThemePreferences() {

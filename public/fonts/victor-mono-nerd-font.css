@@ -1,0 +1,233 @@
+/* Victor Mono Nerd Font */
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./VictorMonoNerdFont-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: italic;
+  font-weight: 100;
+  src: url('./VictorMonoNerdFont-ThinItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./VictorMonoNerdFont-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: italic;
+  font-weight: 200;
+  src: url('./VictorMonoNerdFont-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./VictorMonoNerdFont-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./VictorMonoNerdFont-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./VictorMonoNerdFont-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./VictorMonoNerdFont-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./VictorMonoNerdFont-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./VictorMonoNerdFont-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./VictorMonoNerdFont-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: italic;
+  font-weight: 600;
+  src: url('./VictorMonoNerdFont-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./VictorMonoNerdFont-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./VictorMonoNerdFont-BoldItalic.ttf') format('truetype');
+}
+
+/* Victor Mono Nerd Font Propo (for code blocks) */
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: normal;
+  font-weight: 100;
+  src: url('./VictorMonoNerdFontPropo-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: italic;
+  font-weight: 100;
+  src: url('./VictorMonoNerdFontPropo-ThinItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: normal;
+  font-weight: 200;
+  src: url('./VictorMonoNerdFontPropo-ExtraLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: italic;
+  font-weight: 200;
+  src: url('./VictorMonoNerdFontPropo-ExtraLightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./VictorMonoNerdFontPropo-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./VictorMonoNerdFontPropo-LightItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./VictorMonoNerdFontPropo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./VictorMonoNerdFontPropo-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./VictorMonoNerdFontPropo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./VictorMonoNerdFontPropo-MediumItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./VictorMonoNerdFontPropo-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: italic;
+  font-weight: 600;
+  src: url('./VictorMonoNerdFontPropo-SemiBoldItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./VictorMonoNerdFontPropo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Propo';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./VictorMonoNerdFontPropo-BoldItalic.ttf') format('truetype');
+}
+
+/* Victor Mono Nerd Font Mono (for strict monospace needs) */
+@font-face {
+  font-family: 'Victor Mono Nerd Font Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./VictorMonoNerdFontMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./VictorMonoNerdFontMono-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./VictorMonoNerdFontMono-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./VictorMonoNerdFontMono-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Victor Mono Nerd Font Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./VictorMonoNerdFontMono-Bold.ttf') format('truetype');
+}

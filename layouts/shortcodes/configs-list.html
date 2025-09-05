@@ -1,0 +1,42 @@
+{{ $configs := where site.RegularPages "Section" "configs" }}
+{{ if $configs }}
+<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {{ range $configs }}
+    <a href="{{ .RelPermalink }}" class="blog-card p-6 space-y-4 float-effect block hover:scale-105 transition-transform duration-200">
+        <div class="text-center">
+            <h3 class="text-glow-primary font-bold text-lg mb-2 hover:text-glow-secondary transition-colors duration-200">
+                {{ .LinkTitle }}
+            </h3>
+            {{ if .Description }}
+            <p class="text-glow-tertiary text-sm mb-3">{{ .Description }}</p>
+            {{ end }}
+            {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+            {{ $dateHuman := .Date | time.Format ":date_long" }}
+            <time class="text-glow-tertiary text-xs" datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+        </div>
+        {{ if .Summary }}
+        <p class="text-justify text-sm">{{ .Summary | truncate 120 }}</p>
+        {{ end }}
+        {{ if .Params.categories }}
+        <div class="flex flex-wrap justify-center gap-1 mt-3">
+            {{ range .Params.categories }}
+            <span class="rounded-full italic text-xs px-2 py-1 transition-all duration-200" 
+                  style="background: linear-gradient(135deg, #fa34a1, #fc65b8); color: #0e102d; box-shadow: 0 0 10px rgba(250, 52, 161, 0.3);">
+                # {{ . }}
+            </span>
+            {{ end }}
+        </div>
+        {{ end }}
+        <div class="text-center mt-4">
+            <span class="text-glow-secondary text-sm hover:text-glow-primary transition-colors duration-200">
+                View Config →
+            </span>
+        </div>
+    </a>
+    {{ end }}
+</div>
+{{ else }}
+<div class="blog-card p-6 text-center">
+    <p class="text-glow-tertiary">No configuration files available yet. Check back soon!</p>
+</div>
+{{ end }}

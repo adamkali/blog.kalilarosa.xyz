@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Jus a silly little blog.</title>
+    <title>Categories on Yet another trashy dev blog</title>
     <link>//localhost:1313/categories/</link>
-    <description>Recent content in Categories on Jus a silly little blog.</description>
+    <description>Recent content in Categories on Yet another trashy dev blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Apr 2025 19:29:23 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 05 Sep 2025 08:57:56 -0500</lastBuildDate>
     <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Config</title>
+      <link>//localhost:1313/categories/config/</link>
+      <pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate>
+      <guid>//localhost:1313/categories/config/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lua</title>
+      <link>//localhost:1313/categories/lua/</link>
+      <pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate>
+      <guid>//localhost:1313/categories/lua/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neorg</title>
+      <link>//localhost:1313/categories/neorg/</link>
+      <pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate>
+      <guid>//localhost:1313/categories/neorg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neovim</title>
+      <link>//localhost:1313/categories/neovim/</link>
+      <pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate>
+      <guid>//localhost:1313/categories/neovim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Recipe</title>
+      <link>//localhost:1313/categories/recipe/</link>
+      <pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate>
+      <guid>//localhost:1313/categories/recipe/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blog</title>
       <link>//localhost:1313/categories/blog/</link>
@@ -16,24 +51,17 @@
       <description></description>
     </item>
     <item>
+      <title>Dotfile</title>
+      <link>//localhost:1313/categories/dotfile/</link>
+      <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
+      <guid>//localhost:1313/categories/dotfile/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Hugo</title>
       <link>//localhost:1313/categories/hugo/</link>
       <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
       <guid>//localhost:1313/categories/hugo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Neorg</title>
-      <link>//localhost:1313/categories/neorg/</link>
-      <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>//localhost:1313/categories/neorg/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Neovim</title>
-      <link>//localhost:1313/categories/neovim/</link>
-      <pubDate>Sat, 05 Apr 2025 09:28:54 -0500</pubDate>
-      <guid>//localhost:1313/categories/neovim/</guid>
       <description></description>
     </item>
     <item>
