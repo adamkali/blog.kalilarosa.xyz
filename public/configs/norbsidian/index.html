@@ -1,141 +1,305 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" type=image/png href=blog.kalilarosa.xyz/favicon.ico><link rel=preload href=../../fonts/VictorMonoNerdFontPropo-Regular.ttf as=font type=font/ttf crossorigin><link rel=preload href=../../fonts/VictorMonoNerdFont-Regular.ttf as=font type=font/ttf crossorigin><link rel=stylesheet href=../../fonts/victor-mono-nerd-font.css><title>Yet another trashy dev blog | norbsidian</title>
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="//localhost:1313/favicon.ico" />
+
+
+<link rel="preload" href="../../fonts/VictorMonoNerdFontPropo-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="../../fonts/VictorMonoNerdFont-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="../../fonts/victor-mono-nerd-font.css">
+
+
+<title>Yet another trashy dev blog | norbsidian</title>
 
   
+  
     
     
       
-        
-          <link rel="preload" href="/css/main.min.a9d9543524369c7bc13044e5a7bb8c28298458adb0458171b6f3fed97ffa4807.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-          <noscript><link rel="stylesheet" href="/css/main.min.a9d9543524369c7bc13044e5a7bb8c28298458adb0458171b6f3fed97ffa4807.css" integrity="sha256-qdlUNSQ2nHvBMETlp7uMKCmEWK2wRYFxtvP&#43;2X/6SAc=" crossorigin="anonymous"></noscript>
-        
+        <link rel="stylesheet" href="//localhost:1313/css/main.min.css">
       
     
   
-</head><body class="min-h-screen text-lg relative"><main><div class="flex flex-col items-center min-h-screen"><nav aria-label=breadcrumb class="glass-nav w-3/5 mx-auto mt-6 pt-4 flex flex-row h-12 divide-slate-200 text-lg font-semibold text-center justify-evenly mb-8"><ol class="space-x-4 flex flex-row"><li class="duration-150 transform align-middle"><a href=../../ class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom:2px solid #8da0b8" onmouseover='this.style.borderBottomColor="#fa34a1"' onmouseout='this.style.borderBottomColor="#8da0b8"'>Home</a></li><li class="duration-150 transform align-middle"><a href=../../posts class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom:2px solid #8da0b8" onmouseover='this.style.borderBottomColor="#fa34a1"' onmouseout='this.style.borderBottomColor="#8da0b8"'>Posts</a></li><li class="duration-150 transform align-middle"><a href=../../configs class="text-glow-quartary transition transform duration-200 ease-in-out" style="border-bottom:2px solid #fc853f">Configs</a></li><li class="duration-150 transform align-middle"><a href=../../about class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom:2px solid #8da0b8" onmouseover='this.style.borderBottomColor="#fa34a1"' onmouseout='this.style.borderBottomColor="#8da0b8"'>About</a></li><li class="duration-150 transform align-middle"><a href=https://github.com/adamkali class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom:2px solid #8da0b8" onmouseover='this.style.borderBottomColor="#fa34a1"' onmouseout='this.style.borderBottomColor="#8da0b8"' target=_blank rel="noopener noreferrer">Github</a></li><li class="duration-150 transform align-middle"><a href=www.linkedin.com/in/adam-kalinowski-a8209a1b1 class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom:2px solid #8da0b8" onmouseover='this.style.borderBottomColor="#fa34a1"' onmouseout='this.style.borderBottomColor="#8da0b8"'>Linkedin</a></li><li class="duration-150 transform align-middle"><a href=../../index.xml class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom:2px solid #8da0b8" onmouseover='this.style.borderBottomColor="#fa34a1"' onmouseout='this.style.borderBottomColor="#8da0b8"'>📡 RSS</a></li></ol></nav><div class="w-2/3 max-w-4xl space-y-8 mt-8"><header class=w-full><h1 class="text-center mb-6">norbsidian</h1><i class="nf nf-fa-clock_0"></i><div aria-label=breadcrumb class="glass-nav w-full mx-auto mt-6 pt-4 flex flex-row h-12 divide-slate-200 text-lg font-semibold text-center justify-evenly mb-8"><ol class="space-x-4 flex flex-row"><li><b class="text-glow-primary font-bold">Created:</b>&nbsp;<time datetime=2025-09-04T23:59:05-05:00>September 4, 2025</time></li><li><b class="text-glow-primary font-bold">Updated:</b>&nbsp;<time datetime=2025-09-05T08:57:56-05:00>September 5, 2025</time></li><li><b class="text-glow-primary font-bold">Reading Time:</b>&nbsp;4 minutes</li><li><a href=../../files/norbsidian.lua target=_blank rel="noopener noreferrer" class="text-glow-secondary hover:text-glow-primary transition-colors duration-200 text-sm"><span class=nf>📥</span> Download</a></li></ol></div></header><article class="blog-card space-y-4 text-justify mb-8 p-8"><h1 id=this-is-some-expert-tier-exporting>This Is some expert tier exporting</h1><p>So one thing I had a problem with is getting my neorg notes to export to obsidian without manually having to specify the directory that it will be exported to. So here is a recipe for a script that I wrote for my neovim config that does just that.</p><h2 id=pragma>Pragma</h2><p>We start offcreate some tables and load in some libraries</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kd>local</span> <span class=n>norbsidian</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>builtins</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s2>&#34;telescope.builtin&#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>pickers</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s2>&#34;telescope.pickers&#34;</span><span class=p>)</span>
-</span></span></code></pre></div><h2 id=i-am-now-going-to-define-this-here-class-and-function>I am now going to define this here class and function</h2><p>Now the NorbOptions class is a secret mousekatool to use later more on that later, but the norbsidian_export_template function just takes the inputs and gives us a pure function that will always generate the proper export.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>---@class NorbOptions</span>
-</span></span><span class=line><span class=cl><span class=c1>---@field name string</span>
-</span></span><span class=line><span class=cl><span class=c1>---@field dir string must be the absolute path, no trailing slash | default: $HOME</span>
-</span></span><span class=line><span class=cl><span class=c1>-- make this next on optional</span>
-</span></span><span class=line><span class=cl><span class=c1>---@field env string nil must be a env_var that points to the directory, no trailing slash | default: $HOME</span>
-</span></span><span class=line><span class=cl><span class=c1>---</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl><span class=c1>--- @param loc string</span>
-</span></span><span class=line><span class=cl><span class=c1>--- @return filename string</span>
-</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=kr>function</span> <span class=nf>norbsidian_export_template</span><span class=p>(</span><span class=n>loc</span><span class=p>,</span> <span class=n>filename</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> <span class=n>filename</span> <span class=o>=</span> <span class=n>loc</span> <span class=o>..</span> <span class=n>filename</span> <span class=o>..</span> <span class=s2>&#34;.md&#34;</span>
-</span></span><span class=line><span class=cl> <span class=kr>return</span> <span class=s2>&#34;Neorg export to-file &#34;</span> <span class=o>..</span> <span class=n>filename</span> <span class=o>..</span> <span class=s2>&#34; markdown&#34;</span>
-</span></span><span class=line><span class=cl><span class=kr>end</span>
-</span></span></code></pre></div><h2 id=telescope->Telescope 🥰</h2><p>Alright so now this is another function that will give a nice gui to choose a Norb to export our neorg file. dont worry we are getting there</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>norbsidian.telescope</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>selections</span><span class=p>,</span> <span class=n>callback</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=n>assert</span><span class=p>(</span><span class=o>#</span><span class=n>selections</span> <span class=o>&gt;</span> <span class=mi>0</span><span class=p>,</span> <span class=s2>&#34;No selections provided&#34;</span><span class=p>)</span> <span class=c1>-- Ensure there are selections</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>pickers</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;telescope.pickers&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>finders</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;telescope.finders&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>conf</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;telescope.config&#39;</span><span class=p>).</span><span class=n>values</span>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>actions</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;telescope.actions&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>action_state</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;telescope.actions.state&#39;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>opts</span> <span class=o>=</span> <span class=p>{}</span>
-</span></span><span class=line><span class=cl> <span class=n>pickers.new</span><span class=p>(</span><span class=n>opts</span><span class=p>,</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>prompt_title</span> <span class=o>=</span> <span class=s2>&#34;Select a Export local&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>  <span class=n>finder</span> <span class=o>=</span> <span class=n>finders.new_table</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>   <span class=n>results</span> <span class=o>=</span> <span class=n>selections</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>   <span class=n>entry_maker</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>entry</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>	   <span class=kr>return</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl>		   <span class=n>value</span> <span class=o>=</span> <span class=n>entry</span><span class=p>,</span>                                  <span class=c1>-- &lt;-- -----------------\</span>
-</span></span><span class=line><span class=cl>		   <span class=n>display</span> <span class=o>=</span> <span class=n>entry.name</span><span class=p>,</span>                           <span class=c1>-- SAME THING            |</span>
-</span></span><span class=line><span class=cl>		   <span class=n>ordinal</span> <span class=o>=</span> <span class=n>entry.name</span><span class=p>,</span>                           <span class=c1>-- /--------------------/</span>
-</span></span><span class=line><span class=cl>	   <span class=p>}</span>                                                   <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>   <span class=kr>end</span>                                                     <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>  <span class=p>},</span>                                                          <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>  <span class=n>sorter</span> <span class=o>=</span> <span class=n>conf.generic_sorter</span><span class=p>(</span><span class=n>opts</span><span class=p>),</span>                         <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>  <span class=n>attach_mappings</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>prompt_bufnr</span><span class=p>,</span> <span class=n>_map</span><span class=p>)</span>              <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>   <span class=n>actions.select_default</span><span class=p>:</span><span class=n>replace</span><span class=p>(</span><span class=kr>function</span><span class=p>()</span>               <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>	   <span class=kd>local</span> <span class=n>selection</span> <span class=o>=</span> <span class=n>action_state.get_selected_entry</span><span class=p>()</span> <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>	   <span class=n>actions.close</span><span class=p>(</span><span class=n>prompt_bufnr</span><span class=p>)</span>                         <span class=c1>-- |</span>
-</span></span><span class=line><span class=cl>	   <span class=n>callback</span><span class=p>(</span><span class=n>selection.value</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>	   <span class=c1>--               ^\____________________________________/</span>
-</span></span><span class=line><span class=cl>   <span class=kr>end</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>   <span class=kr>return</span> <span class=kc>true</span>
-</span></span><span class=line><span class=cl>  <span class=kr>end</span><span class=p>,</span>
-</span></span><span class=line><span class=cl> <span class=p>}):</span><span class=n>find</span><span class=p>()</span>
-</span></span><span class=line><span class=cl><span class=kr>end</span>
-</span></span></code></pre></div><h2 id=norbs->NORBS 👹</h2><p>this is where you can add any amount of locations for you to export to. Give the name something recognizable and the directory the absolute path.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>---@field Norbs table</span>
-</span></span><span class=line><span class=cl><span class=n>norbsidian.Norbs</span> <span class=o>=</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Blog Posts&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>  <span class=n>dir</span> <span class=o>=</span> <span class=s2>&#34;/home/adamkali/git/blog.kalilarosa.xyz/content/posts/&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl> <span class=p>},</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Blog Configs&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>  <span class=n>dir</span> <span class=o>=</span> <span class=s2>&#34;/home/adamkali/git/blog.kalilarosa.xyz/content/configs/&#34;</span>
-</span></span><span class=line><span class=cl> <span class=p>},</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Dailies&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>  <span class=n>dir</span> <span class=o>=</span> <span class=s2>&#34;/mnt/c/Users/adam/Documents/notes/My_Second_Mind/05-Dailies/&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl> <span class=p>},</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Work&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>  <span class=n>dir</span> <span class=o>=</span> <span class=s2>&#34;/mnt/c/Users/adam/Documents/notes/My_Second_Mind/09-Work/&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl> <span class=p>},</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Mindspace Docs&#34;</span>
-</span></span><span class=line><span class=cl> <span class=p>},</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Egg Cli Docs&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>  <span class=n>dir</span> <span class=o>=</span> <span class=s2>&#34;/home/adamkali/projects/egg_cli/docs/&#34;</span>
-</span></span><span class=line><span class=cl> <span class=p>},</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span>
-</span></span><span class=line><span class=cl>  <span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;Dotnvim Docs&#34;</span><span class=p>,</span>
-</span></span><span class=line><span class=cl>  <span class=n>dir</span> <span class=o>=</span> <span class=s2>&#34;/home/adamkali/git/dotnvim/docs/&#34;</span>
-</span></span><span class=line><span class=cl> <span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span></code></pre></div><h2 id=the-export-function>The Export Function</h2><p>Now we are going to define the export function that will call our pure norbsidian_export_template function.
+
+
+</head>
+
+<body class="min-h-screen text-lg relative">
+  <main>
+    
+<div class="flex flex-col items-center min-h-screen">
+	
+<nav aria-label="breadcrumb"
+    class="glass-nav w-3/5 mx-auto mt-6 pt-4 flex flex-row h-12 divide-slate-200 text-lg font-semibold text-center justify-evenly mb-8">
+
+    <ol class="space-x-4 flex flex-row">
+<li class="duration-150 transform align-middle">
+    <a href="../../"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >Home</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../posts"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >Posts</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../configs"
+        class="text-glow-quartary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #fc853f;" >Configs</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../about"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >About</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="https://github.com/adamkali"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'"  target="_blank" rel="noopener noreferrer" >Github</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="www.linkedin.com/in/adam-kalinowski-a8209a1b1"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >Linkedin</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../index.xml"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >📡 RSS</a>
+    
+</li>
+    </ol>
+</nav>
+
+	<div class="w-2/3 max-w-4xl space-y-8 mt-8">
+		
+		<header class="w-full">
+			<h1 class="text-center mb-6">norbsidian</h1>
+			
+			
+			<i class="nf nf-fa-clock_0"></i>
+			<div aria-label="breadcrumb"
+				class="glass-nav w-full mx-auto mt-6 pt-4 flex flex-row h-12 divide-slate-200 text-lg font-semibold text-center justify-evenly mb-8">
+				<ol class="space-x-4 flex flex-row">
+					
+					<li>
+						<b class="text-glow-primary font-bold">Created:</b>&nbsp;<time datetime="2025-09-04T23:59:05-05:00">September 4, 2025</time>
+					</li>
+					
+					
+					
+					<li>
+						<b class="text-glow-primary font-bold"> Updated:</b>&nbsp;<time
+							datetime="2025-09-05T08:57:56-05:00">September 5, 2025</time>
+					</li>
+					
+					<li class="">
+						<b class="text-glow-primary font-bold">Reading Time:</b>&nbsp;4 minutes
+					</li>
+					
+					<li class="">
+						
+							<a href="../../files/norbsidian.lua" target="_blank" rel="noopener noreferrer" 
+							   class="text-glow-secondary hover:text-glow-primary transition-colors duration-200 text-sm">
+								<span class="nf">📥</span> Download
+							</a>
+						
+					</li>
+					
+				</ol>
+			</div>
+		</header>
+		
+		
+		<article class="blog-card space-y-4 text-justify mb-8 p-8">
+			<h1 id="this-is-some-expert-tier-exporting">This Is some expert tier exporting</h1>
+<p>So one thing I had a problem with is getting my neorg notes to export to obsidian without manually having to specify the directory that it will be exported to. So here is a recipe for a script that I wrote for my neovim config that does just that.</p>
+<h2 id="pragma">Pragma</h2>
+<p>We start offcreate some tables and load in some libraries</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">norbsidian</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">builtins</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope.builtin&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">pickers</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;telescope.pickers&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="i-am-now-going-to-define-this-here-class-and-function">I am now going to define this here class and function</h2>
+<p>Now the NorbOptions class is a secret mousekatool to use later more on that later, but the norbsidian_export_template function just takes the inputs and gives us a pure function that will always generate the proper export.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">---@class NorbOptions</span>
+</span></span><span class="line"><span class="cl"><span class="c1">---@field name string</span>
+</span></span><span class="line"><span class="cl"><span class="c1">---@field dir string must be the absolute path, no trailing slash | default: $HOME</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- make this next on optional</span>
+</span></span><span class="line"><span class="cl"><span class="c1">---@field env string nil must be a env_var that points to the directory, no trailing slash | default: $HOME</span>
+</span></span><span class="line"><span class="cl"><span class="c1">---</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">--- @param loc string</span>
+</span></span><span class="line"><span class="cl"><span class="c1">--- @return filename string</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="kr">function</span> <span class="nf">norbsidian_export_template</span><span class="p">(</span><span class="n">loc</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="n">filename</span> <span class="o">=</span> <span class="n">loc</span> <span class="o">..</span> <span class="n">filename</span> <span class="o">..</span> <span class="s2">&#34;.md&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">return</span> <span class="s2">&#34;Neorg export to-file &#34;</span> <span class="o">..</span> <span class="n">filename</span> <span class="o">..</span> <span class="s2">&#34; markdown&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><h2 id="telescope-">Telescope 🥰</h2>
+<p>Alright so now this is another function that will give a nice gui to choose a Norb to export our neorg file. dont worry we are getting there</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">norbsidian.telescope</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">selections</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">assert</span><span class="p">(</span><span class="o">#</span><span class="n">selections</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&#34;No selections provided&#34;</span><span class="p">)</span> <span class="c1">-- Ensure there are selections</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">pickers</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope.pickers&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">finders</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope.finders&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">conf</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope.config&#39;</span><span class="p">).</span><span class="n">values</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">actions</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope.actions&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">action_state</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;telescope.actions.state&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">opts</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"> <span class="n">pickers.new</span><span class="p">(</span><span class="n">opts</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">prompt_title</span> <span class="o">=</span> <span class="s2">&#34;Select a Export local&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">finder</span> <span class="o">=</span> <span class="n">finders.new_table</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="n">results</span> <span class="o">=</span> <span class="n">selections</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="n">entry_maker</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	   <span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		   <span class="n">value</span> <span class="o">=</span> <span class="n">entry</span><span class="p">,</span>                                  <span class="c1">-- &lt;-- -----------------\</span>
+</span></span><span class="line"><span class="cl">		   <span class="n">display</span> <span class="o">=</span> <span class="n">entry.name</span><span class="p">,</span>                           <span class="c1">-- SAME THING            |</span>
+</span></span><span class="line"><span class="cl">		   <span class="n">ordinal</span> <span class="o">=</span> <span class="n">entry.name</span><span class="p">,</span>                           <span class="c1">-- /--------------------/</span>
+</span></span><span class="line"><span class="cl">	   <span class="p">}</span>                                                   <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">end</span>                                                     <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>                                                          <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">  <span class="n">sorter</span> <span class="o">=</span> <span class="n">conf.generic_sorter</span><span class="p">(</span><span class="n">opts</span><span class="p">),</span>                         <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">  <span class="n">attach_mappings</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">prompt_bufnr</span><span class="p">,</span> <span class="n">_map</span><span class="p">)</span>              <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">   <span class="n">actions.select_default</span><span class="p">:</span><span class="n">replace</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>               <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">	   <span class="kd">local</span> <span class="n">selection</span> <span class="o">=</span> <span class="n">action_state.get_selected_entry</span><span class="p">()</span> <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">actions.close</span><span class="p">(</span><span class="n">prompt_bufnr</span><span class="p">)</span>                         <span class="c1">-- |</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">callback</span><span class="p">(</span><span class="n">selection.value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	   <span class="c1">--               ^\____________________________________/</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">end</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">return</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}):</span><span class="n">find</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><h2 id="norbs-">NORBS 👹</h2>
+<p>this is where you can add any amount of locations for you to export to. Give the name something recognizable and the directory the absolute path.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">---@field Norbs table</span>
+</span></span><span class="line"><span class="cl"><span class="n">norbsidian.Norbs</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Blog Posts&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dir</span> <span class="o">=</span> <span class="s2">&#34;/home/adamkali/git/blog.kalilarosa.xyz/content/posts/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Blog Configs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dir</span> <span class="o">=</span> <span class="s2">&#34;/home/adamkali/git/blog.kalilarosa.xyz/content/configs/&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Dailies&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dir</span> <span class="o">=</span> <span class="s2">&#34;/mnt/c/Users/adam/Documents/notes/My_Second_Mind/05-Dailies/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Work&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dir</span> <span class="o">=</span> <span class="s2">&#34;/mnt/c/Users/adam/Documents/notes/My_Second_Mind/09-Work/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Mindspace Docs&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Egg Cli Docs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dir</span> <span class="o">=</span> <span class="s2">&#34;/home/adamkali/projects/egg_cli/docs/&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">name</span> <span class="o">=</span> <span class="s2">&#34;Dotnvim Docs&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">dir</span> <span class="o">=</span> <span class="s2">&#34;/home/adamkali/git/dotnvim/docs/&#34;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="the-export-function">The Export Function</h2>
+<p>Now we are going to define the export function that will call our pure norbsidian_export_template function.
 Right now i have it configurable to have either a directory or an env variable.
 However, I am sure you can see if you are using multiple computers you can define env variables on each computer and just point to the right location. This excersise is left to the reader ;)
 Or if neither are defined, just export the norg file to home.
-We use the secret mousekatool: NorbOptions, to get some intellisence when writing out the function.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=c1>---@param selection NorbOptions</span>
-</span></span><span class=line><span class=cl><span class=n>norbsidian.export</span> <span class=o>=</span> <span class=kr>function</span><span class=p>(</span><span class=n>selection</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>filename</span> <span class=o>=</span> <span class=n>vim.api</span><span class=p>.</span><span class=n>nvim_buf_get_name</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=n>filename</span> <span class=o>=</span> <span class=n>string.sub</span><span class=p>(</span><span class=n>filename</span><span class=p>,</span> <span class=mi>1</span><span class=p>,</span> <span class=n>string.len</span><span class=p>(</span><span class=n>filename</span><span class=p>)</span> <span class=o>-</span> <span class=mi>5</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kd>local</span> <span class=n>filename_path</span> <span class=o>=</span> <span class=n>vim.split</span><span class=p>(</span><span class=n>filename</span><span class=p>,</span> <span class=s2>&#34;/&#34;</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=n>filename</span> <span class=o>=</span>  <span class=n>filename_path</span><span class=p>[</span><span class=o>#</span><span class=n>filename_path</span><span class=p>]</span>
-</span></span><span class=line><span class=cl> <span class=c1>-- vim.notify(&#34;Selected: &#34;..vim.json.encode(filename_path) , vim.log.levels.TRACE, { title = &#34;Norbsidian&#34;, timeout = 1000 })</span>
-</span></span><span class=line><span class=cl> <span class=kr>if</span> <span class=n>selection.dir</span> <span class=kr>then</span>
-</span></span><span class=line><span class=cl>  <span class=n>norbsidian.export_loc</span> <span class=o>=</span> <span class=n>norbsidian_export_template</span><span class=p>(</span><span class=n>selection.dir</span><span class=p>,</span> <span class=n>filename</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kr>elseif</span> <span class=n>selection.env</span> <span class=kr>then</span>
-</span></span><span class=line><span class=cl>  <span class=n>norbsidian.export_loc</span> <span class=o>=</span> <span class=n>norbsidian_export_template</span><span class=p>(</span><span class=n>os.getenv</span><span class=p>(</span><span class=n>selection.env</span><span class=p>),</span> <span class=n>filename</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kr>else</span>
-</span></span><span class=line><span class=cl>  <span class=n>vim.notify</span><span class=p>(</span><span class=s2>&#34;No dir or env provided: Defaulting to $HOME&#34;</span><span class=p>,</span> <span class=n>vim.log</span><span class=p>.</span><span class=n>levels.WARN</span><span class=p>,</span> <span class=p>{</span> <span class=n>title</span> <span class=o>=</span> <span class=s2>&#34;Norbsidian&#34;</span><span class=p>,</span> <span class=n>timeout</span> <span class=o>=</span> <span class=mi>1000</span> <span class=p>})</span>
-</span></span><span class=line><span class=cl>  <span class=n>norbsidian.export_loc</span> <span class=o>=</span> <span class=n>norbsidian_export_template</span><span class=p>(</span><span class=n>os.getenv</span><span class=p>(</span><span class=s2>&#34;HOME&#34;</span><span class=p>),</span> <span class=n>filename</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kr>end</span>
-</span></span><span class=line><span class=cl> <span class=kr>if</span> <span class=n>norbsidian.export_loc</span> <span class=kr>then</span>
-</span></span><span class=line><span class=cl>  <span class=n>vim.cmd</span><span class=p>(</span><span class=n>norbsidian.export_loc</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kr>end</span>
-</span></span><span class=line><span class=cl><span class=kr>end</span>
-</span></span></code></pre></div><h2 id=the-thing-you-call-from-a-keybind>The Thing you call from a keybind</h2><p>Okay so this is the function that will be called from a keybind, and then those other functions and one we have not met yet will be called. Get the selections an then the function callback will do the exporting!</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=n>norbsidian.get_selections</span> <span class=o>=</span> <span class=kr>function</span><span class=p>()</span>
-</span></span><span class=line><span class=cl> <span class=n>norbsidian.telescope</span><span class=p>(</span><span class=n>norbsidian.Norbs</span><span class=p>,</span> <span class=kr>function</span><span class=p>(</span><span class=n>selection</span><span class=p>)</span>
-</span></span><span class=line><span class=cl>  <span class=n>norbsidian.export</span><span class=p>(</span><span class=n>selection</span><span class=p>)</span>
-</span></span><span class=line><span class=cl> <span class=kr>end</span><span class=p>)</span>
-</span></span><span class=line><span class=cl><span class=kr>end</span>
-</span></span><span class=line><span class=cl><span class=kr>return</span> <span class=n>norbsidian</span>
-</span></span></code></pre></div><h2 id=where-do-we-put-this-file>Where do we put this file?</h2><p>If you use the current standard for neovim configuration, you should have some form of this directory structure in you neovim config. You can just put it in the lua folder so that you can load the functions in a keymaps.lua in the after folder.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>  after/
-</span></span><span class=line><span class=cl>   plugin/
-</span></span><span class=line><span class=cl>        󰣙 keymaps.lua 
-</span></span><span class=line><span class=cl>  lua/
-</span></span><span class=line><span class=cl>      plugins/
-</span></span><span class=line><span class=cl>    󰣙 norbsidian.lua <span class=c1># Put here</span>
-</span></span><span class=line><span class=cl>󰂺  README.md
-</span></span><span class=line><span class=cl>󰣙  init.lua
-</span></span></code></pre></div><p>And here is an example of how you would call the function from a keybind.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-lua data-lang=lua><span class=line><span class=cl><span class=kd>local</span> <span class=n>wk</span> <span class=o>=</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;which-key&#39;</span><span class=p>).</span><span class=n>add</span>
-</span></span><span class=line><span class=cl><span class=kd>local</span> <span class=n>neorg_leader</span> <span class=o>=</span> <span class=s2>&#34;&lt;space&gt;n&#34;</span>
-</span></span><span class=line><span class=cl><span class=c1>-- ... </span>
-</span></span><span class=line><span class=cl><span class=n>wk</span> <span class=p>{</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span> <span class=n>neorg_leader</span><span class=p>,</span> <span class=n>expr</span> <span class=o>=</span> <span class=kc>false</span><span class=p>,</span> <span class=n>group</span> <span class=o>=</span> <span class=s2>&#34;[N]eorg&#34;</span><span class=p>,</span> <span class=n>nowait</span> <span class=o>=</span> <span class=kc>false</span><span class=p>,</span> <span class=n>remap</span> <span class=o>=</span> <span class=kc>false</span><span class=p>,</span> <span class=n>icon</span> <span class=o>=</span> <span class=p>{</span> <span class=n>icon</span> <span class=o>=</span> <span class=s2>&#34;&#34;</span><span class=p>,</span> <span class=s2>&#34;@constructor.tsx&#34;</span> <span class=p>}</span> <span class=p>},</span>
-</span></span><span class=line><span class=cl> <span class=c1>-- ...</span>
-</span></span><span class=line><span class=cl> <span class=p>{</span> <span class=n>neorg_leader</span> <span class=o>..</span> <span class=s1>&#39;e&#39;</span><span class=p>,</span> <span class=n>require</span><span class=p>(</span><span class=s1>&#39;norbsidian&#39;</span><span class=p>).</span><span class=n>get_selections</span><span class=p>,</span> <span class=n>desc</span> <span class=o>=</span> <span class=s2>&#34;neorg configured export&#34;</span> <span class=p>},</span>
-</span></span><span class=line><span class=cl><span class=p>}</span>
-</span></span><span class=line><span class=cl><span class=c1>-- ...</span>
-</span></span></code></pre></div><p>Try it out and let me know what you think! email me, or make an issue on this <a href=https://github.com/adamkali/blog.kalilarosa.xyz>repo</a> if you have any questions!</p></article><div class=row><div class=col-md><a href=blog.kalilarosa.xyz/configs/starship/><span>previous: </span><span>Starship Config</span></a></div><div class="col-md text-md-end"></div></div></div></div><footer><div class=bg-slate-900><p class=text-lg></p></div></footer></main><script src=https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js></script><script src=../../synthwave-shader.js></script></body></html>
+We use the secret mousekatool: NorbOptions, to get some intellisence when writing out the function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">---@param selection NorbOptions</span>
+</span></span><span class="line"><span class="cl"><span class="n">norbsidian.export</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">filename</span> <span class="o">=</span> <span class="n">vim.api</span><span class="p">.</span><span class="n">nvim_buf_get_name</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">filename</span> <span class="o">=</span> <span class="n">string.sub</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">string.len</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="o">-</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">filename_path</span> <span class="o">=</span> <span class="n">vim.split</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&#34;/&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="n">filename</span> <span class="o">=</span>  <span class="n">filename_path</span><span class="p">[</span><span class="o">#</span><span class="n">filename_path</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">-- vim.notify(&#34;Selected: &#34;..vim.json.encode(filename_path) , vim.log.levels.TRACE, { title = &#34;Norbsidian&#34;, timeout = 1000 })</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">if</span> <span class="n">selection.dir</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">  <span class="n">norbsidian.export_loc</span> <span class="o">=</span> <span class="n">norbsidian_export_template</span><span class="p">(</span><span class="n">selection.dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">elseif</span> <span class="n">selection.env</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">  <span class="n">norbsidian.export_loc</span> <span class="o">=</span> <span class="n">norbsidian_export_template</span><span class="p">(</span><span class="n">os.getenv</span><span class="p">(</span><span class="n">selection.env</span><span class="p">),</span> <span class="n">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">else</span>
+</span></span><span class="line"><span class="cl">  <span class="n">vim.notify</span><span class="p">(</span><span class="s2">&#34;No dir or env provided: Defaulting to $HOME&#34;</span><span class="p">,</span> <span class="n">vim.log</span><span class="p">.</span><span class="n">levels.WARN</span><span class="p">,</span> <span class="p">{</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&#34;Norbsidian&#34;</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">1000</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">  <span class="n">norbsidian.export_loc</span> <span class="o">=</span> <span class="n">norbsidian_export_template</span><span class="p">(</span><span class="n">os.getenv</span><span class="p">(</span><span class="s2">&#34;HOME&#34;</span><span class="p">),</span> <span class="n">filename</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">if</span> <span class="n">norbsidian.export_loc</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">  <span class="n">vim.cmd</span><span class="p">(</span><span class="n">norbsidian.export_loc</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><h2 id="the-thing-you-call-from-a-keybind">The Thing you call from a keybind</h2>
+<p>Okay so this is the function that will be called from a keybind, and then those other functions and one we have not met yet will be called. Get the selections an then the function callback will do the exporting!</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">norbsidian.get_selections</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="n">norbsidian.telescope</span><span class="p">(</span><span class="n">norbsidian.Norbs</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">norbsidian.export</span><span class="p">(</span><span class="n">selection</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">end</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="kr">return</span> <span class="n">norbsidian</span>
+</span></span></code></pre></div><h2 id="where-do-we-put-this-file">Where do we put this file?</h2>
+<p>If you use the current standard for neovim configuration, you should have some form of this directory structure in you neovim config. You can just put it in the lua folder so that you can load the functions in a keymaps.lua in the after folder.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  after/
+</span></span><span class="line"><span class="cl">   plugin/
+</span></span><span class="line"><span class="cl">        󰣙 keymaps.lua 
+</span></span><span class="line"><span class="cl">  lua/
+</span></span><span class="line"><span class="cl">      plugins/
+</span></span><span class="line"><span class="cl">    󰣙 norbsidian.lua <span class="c1"># Put here</span>
+</span></span><span class="line"><span class="cl">󰂺  README.md
+</span></span><span class="line"><span class="cl">󰣙  init.lua
+</span></span></code></pre></div><p>And here is an example of how you would call the function from a keybind.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">wk</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;which-key&#39;</span><span class="p">).</span><span class="n">add</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">neorg_leader</span> <span class="o">=</span> <span class="s2">&#34;&lt;space&gt;n&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- ... </span>
+</span></span><span class="line"><span class="cl"><span class="n">wk</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span> <span class="n">neorg_leader</span><span class="p">,</span> <span class="n">expr</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">group</span> <span class="o">=</span> <span class="s2">&#34;[N]eorg&#34;</span><span class="p">,</span> <span class="n">nowait</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">remap</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="n">icon</span> <span class="o">=</span> <span class="p">{</span> <span class="n">icon</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;@constructor.tsx&#34;</span> <span class="p">}</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">-- ...</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span> <span class="n">neorg_leader</span> <span class="o">..</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="n">require</span><span class="p">(</span><span class="s1">&#39;norbsidian&#39;</span><span class="p">).</span><span class="n">get_selections</span><span class="p">,</span> <span class="n">desc</span> <span class="o">=</span> <span class="s2">&#34;neorg configured export&#34;</span> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- ...</span>
+</span></span></code></pre></div><p>Try it out and let me know what you think! email me, or make an issue on this <a href="https://github.com/adamkali/blog.kalilarosa.xyz">repo</a> if you have any questions!</p>
+
+		</article>
+		
+
+		<div class="row">
+    <div class="col-md">
+        
+        <a href="//localhost:1313/configs/starship/">
+            <span>previous: </span>
+            <span>Starship Config</span>
+        </a>
+        
+    </div>
+    <div class="col-md text-md-end">
+        
+        <a href="//localhost:1313/configs/glaze-me/">
+            <span>next: </span>
+            <span>autogroup</span>
+        </a>
+        
+    </div>
+</div>
+	</div>
+</div>
+<footer>
+	<div class="bg-slate-900">
+    <p class="text-lg">
+        
+    </p>
+</div>
+
+</footer>
+
+  </main>
+
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="../../synthwave-shader.js"></script>
+</body>
+</html>

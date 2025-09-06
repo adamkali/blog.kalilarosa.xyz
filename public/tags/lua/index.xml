@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lua on Yet another trashy dev blog</title>
+    <link>//localhost:1313/tags/lua/</link>
+    <description>Recent content in Lua on Yet another trashy dev blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Sep 2025 17:36:04 -0500</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>autogroup</title>
+      <link>//localhost:1313/configs/autogroup/</link>
+      <pubDate>Fri, 05 Sep 2025 11:11:22 -0500</pubDate>
+      <guid>//localhost:1313/configs/autogroup/</guid>
+      <description>&lt;h1 id=&#34;get-glazed-like-the-goat-it-will-not-have-any-consequences&#34;&gt;Get Glazed like the Goat, It will not have any consequences.&lt;/h1&gt;&#xA;&lt;p&gt;I find that one thing that anyone would love to have is a bot whose only job is to glaze you.&#xA;So the goal of this recipe is to do just that, but also give you some tips about how to use neovim.&#xA;First make a lua file called glaze-me.lua, or call it anything you like.&#xA;It should be in your &lt;code&gt;after/plugin&lt;/code&gt; directory.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

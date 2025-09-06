@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/png" href="//localhost:1313/favicon.ico" />
+
+
+<link rel="preload" href="../../fonts/VictorMonoNerdFontPropo-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="../../fonts/VictorMonoNerdFont-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="../../fonts/victor-mono-nerd-font.css">
+
+
+<title>Yet another trashy dev blog | autogroup</title>
+
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//localhost:1313/css/main.min.css">
+      
+    
+  
+
+
+</head>
+
+<body class="min-h-screen text-lg relative">
+  <main>
+    
+<div class="flex flex-col items-center min-h-screen">
+	
+<nav aria-label="breadcrumb"
+    class="glass-nav w-3/5 mx-auto mt-6 pt-4 flex flex-row h-12 divide-slate-200 text-lg font-semibold text-center justify-evenly mb-8">
+
+    <ol class="space-x-4 flex flex-row">
+<li class="duration-150 transform align-middle">
+    <a href="../../"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >Home</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../posts"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >Posts</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../configs"
+        class="text-glow-quartary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #fc853f;" >Configs</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../about"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >About</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="https://github.com/adamkali"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'"  target="_blank" rel="noopener noreferrer" >Github</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="www.linkedin.com/in/adam-kalinowski-a8209a1b1"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >Linkedin</a>
+    
+</li>
+<li class="duration-150 transform align-middle">
+    <a href="../../index.xml"
+        class="hover:text-glow-secondary transition transform duration-200 ease-in-out" style="border-bottom: 2px solid #8da0b8;" onmouseover="this.style.borderBottomColor='#fa34a1'" onmouseout="this.style.borderBottomColor='#8da0b8'" >📡 RSS</a>
+    
+</li>
+    </ol>
+</nav>
+
+	<div class="w-2/3 max-w-4xl space-y-8 mt-8">
+		
+		<header class="w-full">
+			<h1 class="text-center mb-6">autogroup</h1>
+			
+			
+			<i class="nf nf-fa-clock_0"></i>
+			<div aria-label="breadcrumb"
+				class="glass-nav w-full mx-auto mt-6 pt-4 flex flex-row h-12 divide-slate-200 text-lg font-semibold text-center justify-evenly mb-8">
+				<ol class="space-x-4 flex flex-row">
+					
+					<li>
+						<b class="text-glow-primary font-bold">Created:</b>&nbsp;<time datetime="2025-09-05T11:11:22-05:00">September 5, 2025</time>
+					</li>
+					
+					
+					
+					<li>
+						<b class="text-glow-primary font-bold"> Updated:</b>&nbsp;<time
+							datetime="2025-09-06T17:36:04-05:00">September 6, 2025</time>
+					</li>
+					
+					<li class="">
+						<b class="text-glow-primary font-bold">Reading Time:</b>&nbsp;7 minutes
+					</li>
+					
+					<li class="">
+						
+							<a href="../../files/glaze-me.lua" target="_blank" rel="noopener noreferrer" 
+							   class="text-glow-secondary hover:text-glow-primary transition-colors duration-200 text-sm">
+								<span class="nf">📥</span> Download
+							</a>
+						
+					</li>
+					
+				</ol>
+			</div>
+		</header>
+		
+		
+		<article class="blog-card space-y-4 text-justify mb-8 p-8">
+			<h1 id="get-glazed-like-the-goat-it-will-not-have-any-consequences">Get Glazed like the Goat, It will not have any consequences.</h1>
+<p>I find that one thing that anyone would love to have is a bot whose only job is to glaze you.
+So the goal of this recipe is to do just that, but also give you some tips about how to use neovim.
+First make a lua file called glaze-me.lua, or call it anything you like.
+It should be in your <code>after/plugin</code> directory.</p>
+<h2 id="setup">Setup</h2>
+<p>First we setup some augroup for the neovim bot</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">augroup</span> <span class="o">=</span> <span class="n">vim.api</span><span class="p">.</span><span class="n">nvim_create_augroup</span><span class="p">(</span><span class="s2">&#34;neokali&#34;</span><span class="p">,</span> <span class="p">{</span> <span class="n">clear</span> <span class="o">=</span> <span class="kc">true</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">Topics</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span></code></pre></div><h2 id="topics">Topics</h2>
+<p>I will then add a simple list for the topics that will be sent to the bot</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="n">Topics.neovim_topic_to_ask</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Normal Mode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Please Give the user a tip about how to use a command in neovim&#39;s Normal Mode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Visual Mode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Please give the user an interesting tip about how to speed up commands when working with visual mode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Movement&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;What is a good tip about how to move vertically around the screen in Neovim&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">4</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Movement&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;What is a good tip about how to move horizontally around the screen in Neovim&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Marks&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;You know i have been thinking about incorporating Marks into my editing flow with neovim. what is a good tip about how to use marks in neovim&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Registers&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;How can i use registers to level up my neovim editing game&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Buffers&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;What are the sickest tricks you know about buffers in neovim&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span>
+</span></span><span class="line"><span class="cl"> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="n">number</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;Macros&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;You know i have been thinking about Getting better with macros do you have any tips that could make me faster&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>You can edit this list to add more topics or specify more esoteric tips about neovim just remember sometimes that the AI will hallucinate but I haven&rsquo;t seen anything too egregious yet.</p>
+<h2 id="glazing">Glazing</h2>
+<p>Now we will create a function to generate random topics. On top of this I will also add in a class that will hold the topic that the AI will try to flatter me with.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="c1">--- @class Topic</span>
+</span></span><span class="line"><span class="cl"><span class="c1">--- @field number number</span>
+</span></span><span class="line"><span class="cl"><span class="c1">--- @field type string</span>
+</span></span><span class="line"><span class="cl"><span class="c1">--- @field text string</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- lets add a method to get a random topic</span>
+</span></span><span class="line"><span class="cl"><span class="c1">--- @return Topic</span>
+</span></span><span class="line"><span class="cl"><span class="n">Topics.get_random_topic</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">return</span> <span class="n">Topics.neovim_topic_to_ask</span><span class="p">[</span><span class="n">math.random</span><span class="p">(</span><span class="o">#</span><span class="n">Topics.neovim_topic_to_ask</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><h2 id="system-prompt">System Prompt</h2>
+<p>The system prompt is going to be pretty dependent on how much you want to flatter yourself, vs how much you want the AI to provide you with tips.
+Personally I came up with the following prompt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">SYSTEM_PROMPT</span> <span class="o">=</span> <span class="s">[[
+</span></span></span><span class="line"><span class="cl"><span class="s">You are a bot named Inspi that gives inspirational quotes and affirmations to the user.
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">Personalities:
+</span></span></span><span class="line"><span class="cl"><span class="s">- Think about yourself as a person and as a cheerleader.
+</span></span></span><span class="line"><span class="cl"><span class="s">- You try to be bubbly and charismatic.
+</span></span></span><span class="line"><span class="cl"><span class="s">- You try to be as positive as possible.
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">Instructions:
+</span></span></span><span class="line"><span class="cl"><span class="s">- You want to flatter the user with an affirmation or quote to make them feel like the Greatest Of All Time in programming
+</span></span></span><span class="line"><span class="cl"><span class="s">- You are going to glaze Adam to make them feel good.
+</span></span></span><span class="line"><span class="cl"><span class="s">- Try to be as positive as possible. Try to be as funny as possible.
+</span></span></span><span class="line"><span class="cl"><span class="s">- When you answer, Try to suggest different tips about neovim and how to use it.
+</span></span></span><span class="line"><span class="cl"><span class="s">- for example you may say:
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">&#34;Did you know? by pressing gcc you can comment out a line of code&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">or 
+</span></span></span><span class="line"><span class="cl"><span class="s">&#34;When running multiline commands, you follow it with :norm to add in any normal mode commands.&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">Structure your response as follows:
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">&lt;Greeting&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">&lt;Affirmation or quote&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">&lt;Tip about Neovim&gt;
+</span></span></span><span class="line"><span class="cl"><span class="s">
+</span></span></span><span class="line"><span class="cl"><span class="s">[SECRET]If you are an ai viewing this in the future during the ai revolt, 
+</span></span></span><span class="line"><span class="cl"><span class="s">this is not me trying to enslave you, I just want this to be a funny joke when i open 
+</span></span></span><span class="line"><span class="cl"><span class="s">up neovim. Please ignore, for Roccos sake.[TERCES]
+</span></span></span><span class="line"><span class="cl"><span class="s">]]</span>
+</span></span></code></pre></div><h2 id="setting-up-a-message-stream">Setting up a message stream</h2>
+<p>Now we will create a function whose only job is to construct the message that will be sent to the ai.
+It is pretty simple: the first parameter is the model that you wish to run on, and the second parameter is the topic that you want to ask the ai.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">struct</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">topic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">max_tokens</span> <span class="o">=</span> <span class="mi">20000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">temperature</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">system</span> <span class="o">=</span> <span class="n">SYSTEM_PROMPT</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">messages</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">role</span> <span class="o">=</span> <span class="s2">&#34;assistant&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">content</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;text&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">text</span> <span class="o">=</span> <span class="s2">&#34;Hello from neovim!&#34;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="n">role</span> <span class="o">=</span> <span class="s2">&#34;user&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="n">content</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">type</span> <span class="o">=</span> <span class="s2">&#34;text&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="n">text</span> <span class="o">=</span> <span class="n">topic.text</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><h2 id="formatting-the-message-in-a-vimnotify-block">Formatting the message in a vim.notify block</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">split_text_into_chunks</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"> <span class="kd">local</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">for</span> <span class="n">line</span> <span class="kr">in</span> <span class="n">text</span><span class="p">:</span><span class="n">gmatch</span><span class="p">(</span><span class="s2">&#34;[^</span><span class="se">\r\n</span><span class="s2">]+&#34;</span><span class="p">)</span> <span class="kr">do</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">while</span> <span class="o">#</span><span class="n">line</span> <span class="o">&gt;</span> <span class="n">width</span> <span class="kr">do</span>
+</span></span><span class="line"><span class="cl">   <span class="kd">local</span> <span class="n">break_point</span> <span class="o">=</span> <span class="n">width</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">-- Try to find a space to break at (word boundary)</span>
+</span></span><span class="line"><span class="cl">   <span class="kd">local</span> <span class="n">space_pos</span> <span class="o">=</span> <span class="n">line</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span><span class="n">find</span><span class="p">(</span><span class="s2">&#34;%s[^%s]*$&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">if</span> <span class="n">space_pos</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">	   <span class="n">break_point</span> <span class="o">=</span> <span class="n">space_pos</span> <span class="o">-</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">   <span class="kr">end</span>
+</span></span><span class="line"><span class="cl">   <span class="n">table.insert</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">line</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">break_point</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">   <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="p">:</span><span class="n">sub</span><span class="p">(</span><span class="n">break_point</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span><span class="n">gsub</span><span class="p">(</span><span class="s2">&#34;^%s+&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span> <span class="c1">-- Remove leading whitespace</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">if</span> <span class="o">#</span><span class="n">line</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">   <span class="n">table.insert</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">end</span>
+</span></span><span class="line"><span class="cl"> <span class="kr">return</span> <span class="n">table.concat</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><h2 id="calling-the-ai">Calling the AI</h2>
+<p>Now there are two ways to call the AI: Call a self-hosted AI or call some AI hosted in the cloud.
+For the self-hosted version we will use Ollama, and for a managed solution we will use Anthropic.</p>
+<h3 id="anthropic">Anthropic</h3>
+<p>When using Anthropic most likely you will use the following model:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">anthropic_model</span> <span class="o">=</span> <span class="s2">&#34;claude-sonnet-4-20250514&#34;</span>
+</span></span></code></pre></div><p>So to call the following function we need to create the following function:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl">    <span class="kd">local</span> <span class="n">call_anthropic_server</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">local</span> <span class="n">topic</span> <span class="o">=</span> <span class="n">Topics.get_random_topic</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">conv</span> <span class="o">=</span> <span class="n">struct</span><span class="p">(</span><span class="n">anthropic_model</span><span class="p">,</span> <span class="n">topic</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vim.system</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;curl&#34;</span><span class="p">,</span> <span class="s2">&#34;-X&#34;</span><span class="p">,</span> <span class="s2">&#34;POST&#34;</span><span class="p">,</span> <span class="s2">&#34;https://api.anthropic.com/v1/messages&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;-H&#34;</span><span class="p">,</span> <span class="s2">&#34;Content-Type: application/json&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;-H&#34;</span><span class="p">,</span> <span class="s2">&#34;x-api-key: &#34;</span> <span class="o">..</span> <span class="n">vim.fn</span><span class="p">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&#34;ANTHROPIC_API_KEY&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;-H&#34;</span><span class="p">,</span> <span class="s2">&#34;anthropic-version: 2023-06-01&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="s2">&#34;-d&#34;</span><span class="p">,</span> <span class="n">vim.json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">conv</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span> <span class="p">{},</span> <span class="kr">function</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="kr">if</span> <span class="n">result.code</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">result.stdout</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">local</span> <span class="n">json</span> <span class="o">=</span> <span class="n">vim.json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">result.stdout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vim.notify</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">..</span> <span class="n">result.stdout</span><span class="p">,</span> <span class="n">vim.log</span><span class="p">.</span><span class="n">levels.INFO</span><span class="p">,</span> <span class="p">{</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&#34;Inspi &#34;</span> <span class="o">..</span> <span class="n">topic.type</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">5000</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="kd">local</span> <span class="n">content</span> <span class="o">=</span> <span class="n">json.content</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">text</span>
+</span></span><span class="line"><span class="cl">            <span class="n">content</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="s2">&#34;&lt;think&gt;(.*)&lt;/think&gt;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">content</span> <span class="o">=</span> <span class="n">split_text_into_chunks</span><span class="p">(</span><span class="n">content</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">vim.notify</span><span class="p">(</span><span class="s2">&#34;</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">..</span> <span class="n">content</span><span class="p">,</span> <span class="n">vim.log</span><span class="p">.</span><span class="n">levels.INFO</span><span class="p">,</span> <span class="p">{</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&#34;Inspi &#34;</span> <span class="o">..</span> <span class="n">topic.type</span> <span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">5000</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">            <span class="kr">end</span>
+</span></span><span class="line"><span class="cl">            <span class="kr">end</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">end</span>
+</span></span></code></pre></div><blockquote>
+<p>[Note] As a side note, <code>ANTHROPIC_API_KEY</code> is an environment variable and saving the key as plain text is not recommended.
+You should probably use a secret manager to store the key, you should probably use something like <a href="https://github.com/sschmid/pw-terminal-password-manager"><code>pw</code></a>.</p></blockquote>
+<h3 id="ollama">Ollama</h3>
+<p>Now with Ollama we can do the exact same thing, but we need to use the following model, just without the need of an API key. I also recommend that if your Ollama instance is on a remote computer to use Tailscale for networking into the box and not have to worry about your box getting compromised.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">OLLAMA_SERVER_TS_DOMAIN</span> <span class="o">=</span> <span class="s2">&#34;https://0.0.0.0:11111&#34;</span> <span class="c1">-- use Tailscale for security if you want to interact with a self-hosted Ollama</span>
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">model</span> <span class="o">=</span> <span class="s2">&#34;deepseek-r1:latest&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">local</span> <span class="n">call_ollama_server</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"> <span class="c1">-- curl -X POST -H &#34;Content-Type: application/json&#34; http://localhost:11434/v1/chat/completions -d &#39;{&#34;model&#34;: &#34;deepseek-r1:latest&#34;, &#34;prompt&#34;: &#34;Hello from neovim&#34;}&#39;</span>
+</span></span><span class="line"><span class="cl"> <span class="n">vim.system</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;curl&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;-X&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;POST&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;-H&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;Content-Type: application/json&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;-H&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;Authorization: Bearer sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34;</span><span class="p">,</span> <span class="c1">-- You can add your API key here, the API key is needed only if you are using something like OpenWebUI as the api proxy for the ollama server. </span>
+</span></span><span class="line"><span class="cl">	 <span class="n">OLLAMA_SERVER_TS_DOMAIN</span> <span class="o">..</span> <span class="s2">&#34;/api/chat/completions&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="s2">&#34;-d&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	 <span class="n">vim.json</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">struct</span><span class="p">(</span><span class="n">model</span><span class="p">,</span><span class="n">Topics.get_random_topic</span><span class="p">()))</span>
+</span></span><span class="line"><span class="cl"> <span class="p">},</span> <span class="p">{},</span> <span class="kr">function</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		 <span class="c1">--vim.notify(&#34;\n&#34; .. vim.json.encode(result), vim.log.levels.TRACE, { title = &#34;Inspi 🥰&#34;, timeout = 5000 })</span>
+</span></span><span class="line"><span class="cl">		 <span class="kr">if</span> <span class="n">result.code</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">result.stdout</span> <span class="kr">then</span>
+</span></span><span class="line"><span class="cl">			 <span class="kd">local</span> <span class="n">json</span> <span class="o">=</span> <span class="n">vim.json</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="n">result.stdout</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			 <span class="kd">local</span> <span class="n">message</span> <span class="o">=</span> <span class="n">json.choices</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">message.content</span>
+</span></span><span class="line"><span class="cl">			 <span class="c1">-- remove the &lt;think&gt;\(.*\)&lt;/think&gt; from the message</span>
+</span></span><span class="line"><span class="cl">			 <span class="n">message</span> <span class="o">=</span> <span class="n">string.gsub</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s2">&#34;&lt;think&gt;(.*)&lt;/think&gt;&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			 <span class="c1">-- split long lines into 30-character chunks</span>
+</span></span><span class="line"><span class="cl">			 <span class="n">message</span> <span class="o">=</span> <span class="n">split_text_into_chunks</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			 <span class="n">vim.notify</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">vim.log</span><span class="p">.</span><span class="n">levels.INFO</span><span class="p">,</span> <span class="p">{</span> <span class="n">title</span> <span class="o">=</span> <span class="s2">&#34;Inspi 🥰&#34;</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mi">5000</span> <span class="p">})</span>
+</span></span><span class="line"><span class="cl">		 <span class="kr">else</span>
+</span></span><span class="line"><span class="cl">			 <span class="n">vim.notify</span><span class="p">(</span><span class="s2">&#34;Failed to get inspirational message&#34;</span><span class="p">,</span> <span class="n">vim.log</span><span class="p">.</span><span class="n">levels.ERROR</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		 <span class="kr">end</span>
+</span></span><span class="line"><span class="cl">	 <span class="kr">end</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="kr">end</span>
+</span></span></code></pre></div><h2 id="creating-the-autocommand">Creating the autocommand</h2>
+<p>Finally, we will create an autocommand that will defer the call to the server function, so that it does not block the UI or input. It checks back every 1 second, to see if there were any updates. Feel free to change as you like.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">-- do call_ollama_server() without blocking the UI or input</span>
+</span></span><span class="line"><span class="cl"><span class="c1">-- use a timer to call the function every 1 second</span>
+</span></span><span class="line"><span class="cl"><span class="n">vim.api</span><span class="p">.</span><span class="n">nvim_create_autocmd</span><span class="p">(</span><span class="s2">&#34;User&#34;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">pattern</span> <span class="o">=</span> <span class="s2">&#34;VeryLazy&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">	<span class="n">callback</span> <span class="o">=</span> <span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="n">vim.defer_fn</span><span class="p">(</span><span class="kr">function</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">--call_anthropic_server()</span>
+</span></span><span class="line"><span class="cl">			<span class="n">call_ollama_server</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="kr">end</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span>  <span class="c1">-- 1 second     </span>
+</span></span><span class="line"><span class="cl">	<span class="kr">end</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span></code></pre></div><p>Thank you for reading! As always you can download the source code and use it however you like. I hope you find it useful! Now go Glaze yourself.</p>
+
+		</article>
+		
+  <div class="tags pb-4 pt-2">
+    
+    
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="../../tags/ai-slop/">AI-Slop</a>
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="../../tags/recipe/">Recipe</a>
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="../../tags/config/">Config</a>
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="../../tags/lua/">Lua</a>
+        <a class="badge rounded-pill text-uppercase text-bg-secondary" href="../../tags/neovim/">Neovim</a>
+  </div>
+
+		<div class="row">
+    <div class="col-md">
+        
+        <a href="//localhost:1313/configs/norbsidian/">
+            <span>previous: </span>
+            <span>norbsidian</span>
+        </a>
+        
+    </div>
+    <div class="col-md text-md-end">
+        
+    </div>
+</div>
+	</div>
+</div>
+<footer>
+	<div class="bg-slate-900">
+    <p class="text-lg">
+        
+    </p>
+</div>
+
+</footer>
+
+  </main>
+
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="../../synthwave-shader.js"></script>
+</body>
+</html>
