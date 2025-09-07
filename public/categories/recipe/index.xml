@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recipe on Yet another trashy dev blog</title>
-    <link>//localhost:1313/categories/recipe/</link>
+    <link>blog.kalilarosa.xyz/categories/recipe/</link>
     <description>Recent content in Recipe on Yet another trashy dev blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Sep 2025 17:36:04 -0500</lastBuildDate>
-    <atom:link href="//localhost:1313/categories/recipe/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="blog.kalilarosa.xyz/categories/recipe/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>autogroup</title>
-      <link>//localhost:1313/configs/autogroup/</link>
+      <link>blog.kalilarosa.xyz/configs/glaze-me/</link>
       <pubDate>Fri, 05 Sep 2025 11:11:22 -0500</pubDate>
-      <guid>//localhost:1313/configs/autogroup/</guid>
+      <guid>blog.kalilarosa.xyz/configs/glaze-me/</guid>
       <description>&lt;h1 id=&#34;get-glazed-like-the-goat-it-will-not-have-any-consequences&#34;&gt;Get Glazed like the Goat, It will not have any consequences.&lt;/h1&gt;&#xA;&lt;p&gt;I find that one thing that anyone would love to have is a bot whose only job is to glaze you.&#xA;So the goal of this recipe is to do just that, but also give you some tips about how to use neovim.&#xA;First make a lua file called glaze-me.lua, or call it anything you like.&#xA;It should be in your &lt;code&gt;after/plugin&lt;/code&gt; directory.&lt;/p&gt;</description>
     </item>
     <item>
       <title>norbsidian</title>
-      <link>//localhost:1313/configs/norbsidian/</link>
+      <link>blog.kalilarosa.xyz/configs/norbsidian/</link>
       <pubDate>Thu, 04 Sep 2025 23:59:05 -0500</pubDate>
-      <guid>//localhost:1313/configs/norbsidian/</guid>
+      <guid>blog.kalilarosa.xyz/configs/norbsidian/</guid>
       <description>&lt;h1 id=&#34;this-is-some-expert-tier-exporting&#34;&gt;This Is some expert tier exporting&lt;/h1&gt;&#xA;&lt;p&gt;So one thing I had a problem with is getting my neorg notes to export to obsidian without manually having to specify the directory that it will be exported to. So here is a recipe for a script that I wrote for my neovim config that does just that.&lt;/p&gt;&#xA;&lt;h2 id=&#34;pragma&#34;&gt;Pragma&lt;/h2&gt;&#xA;&lt;p&gt;We start offcreate some tables and load in some libraries&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-lua&#34; data-lang=&#34;lua&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;norbsidian&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;builtins&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;telescope.builtin&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pickers&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;require&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;telescope.pickers&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;i-am-now-going-to-define-this-here-class-and-function&#34;&gt;I am now going to define this here class and function&lt;/h2&gt;&#xA;&lt;p&gt;Now the NorbOptions class is a secret mousekatool to use later more on that later, but the norbsidian_export_template function just takes the inputs and gives us a pure function that will always generate the proper export.&lt;/p&gt;</description>
     </item>
   </channel>
