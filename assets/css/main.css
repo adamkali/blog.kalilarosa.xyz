@@ -900,6 +900,208 @@ pre::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #fc65b8, #fa34a1);
 }
 
+/* Cyberpunk List Styling - Only for article content */
+article ul, article ol {
+    @apply space-y-3 my-4;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+article ul li, article ol li {
+    @apply text-justify leading-relaxed;
+    color: var(--vp-comment);
+    position: relative;
+    padding-left: 1rem;
+    margin: 0.75rem 0;
+}
+
+/* Unordered list bullets */
+article ul li::before {
+    content: '▸';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    color: var(--vp-secondary-2);
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(250, 52, 161, 0.6);
+    animation: terminal-pulse 3s infinite;
+}
+
+/* Ordered list numbers */
+article ol {
+    counter-reset: cyberpunk-counter;
+}
+
+article ol li {
+    counter-increment: cyberpunk-counter;
+}
+
+article ol li::before {
+    content: '[' counter(cyberpunk-counter, decimal) ']';
+    position: absolute;
+    left: -1.5rem;
+    top: 0;
+    color: var(--vp-tertiary-2);
+    font-family: 'Victor Mono Nerd Font', monospace;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(136, 100, 245, 0.6);
+    font-size: 0.9em;
+}
+
+@keyframes terminal-pulse {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.7; }
+}
+
+/* Nested lists */
+article ul ul, article ol ul, article ul ol, article ol ol {
+    margin: 0.5rem 0;
+    padding-left: 1.25rem;
+}
+
+article ul ul li::before {
+    content: '◦';
+    color: var(--vp-tertiary-3);
+    text-shadow: 0 0 6px rgba(175, 149, 252, 0.5);
+}
+
+article ol ol li::before {
+    content: '[' counter(cyberpunk-counter, lower-alpha) ']';
+    color: var(--vp-quartary-2);
+    text-shadow: 0 0 6px rgba(245, 155, 103, 0.5);
+}
+
+/* List hover effects */
+article li:hover {
+    color: var(--vp-fg);
+    transition: color 0.2s ease;
+}
+
+article li:hover::before {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Cyberpunk Previous/Next Navigation Buttons */
+.row {
+    @apply flex flex-row items-stretch gap-4;
+}
+
+.row .col-md {
+    @apply flex-1;
+}
+
+.row .col-md a {
+    @apply block w-full px-6 py-4 rounded-lg transition-all duration-300 relative overflow-hidden text-center;
+    background: linear-gradient(135deg, rgba(14, 16, 45, 0.8), rgba(10, 40, 70, 0.6));
+    border: 1px solid rgba(53, 47, 245, 0.3);
+    color: var(--vp-comment);
+    text-decoration: none;
+    box-shadow: 
+        0 4px 16px rgba(53, 47, 245, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    position: relative;
+    min-height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row .col-md a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(250, 52, 161, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.row .col-md a:hover {
+    transform: translateY(-2px);
+    border-color: var(--vp-secondary-2);
+    color: var(--vp-fg);
+    box-shadow: 
+        0 8px 25px rgba(250, 52, 161, 0.3),
+        0 0 20px rgba(53, 47, 245, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.row .col-md a:hover::before {
+    left: 100%;
+}
+
+/* Previous button specific styling */
+.row .col-md a span:first-child {
+    font-family: 'Victor Mono Nerd Font', monospace;
+    font-weight: bold;
+    color: var(--vp-tertiary-2);
+    text-shadow: 0 0 6px rgba(136, 100, 245, 0.6);
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Add terminal-style arrows */
+.row .col-md:first-child a span:first-child::before {
+    content: '◀ ';
+    color: var(--vp-secondary-2);
+    text-shadow: 0 0 8px rgba(250, 52, 161, 0.6);
+    animation: terminal-pulse 3s infinite;
+}
+
+.row .col-md:last-child a span:first-child::after {
+    content: ' ▶';
+    color: var(--vp-secondary-2);
+    text-shadow: 0 0 8px rgba(250, 52, 161, 0.6);
+    animation: terminal-pulse 3s infinite;
+}
+
+/* Article title in navigation */
+.row .col-md a span:last-child {
+    color: var(--vp-quartary-2);
+    text-shadow: 0 0 4px rgba(245, 155, 103, 0.4);
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.95em;
+}
+
+.row .col-md a:hover span:last-child {
+    color: var(--vp-quartary-1);
+    text-shadow: 0 0 8px rgba(252, 133, 63, 0.6);
+}
+
+/* Desktop wide viewport adjustments */
+@media (min-width: 1024px) {
+    .row {
+        @apply gap-6;
+    }
+    
+    .row .col-md a {
+        @apply px-8 py-6;
+        min-height: 6rem;
+    }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        @apply flex-col gap-3;
+    }
+    
+    .row .col-md a {
+        padding: 1.25rem 1rem;
+        min-height: 4rem;
+    }
+    
+    .row .col-md a span:last-child {
+        font-size: 0.9em;
+        margin-top: 0.5rem;
+    }
+}
+
 /* Strict monospace class for when you need true monospace */
 .mono-strict {
     font-family: 'Victor Mono Nerd Font Mono', monospace;

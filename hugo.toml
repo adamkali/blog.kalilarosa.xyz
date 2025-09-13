@@ -1,9 +1,9 @@
-baseURL = 'blog.kalilarosa.xyz'
+baseURL = 'https://blog.kalilarosa.xyz'
 languageCode = 'en-us'
 title = 'Yet another trashy dev blog'
 # URL handling
-relativeURLs = true
-canonifyURLs = true
+relativeURLs = false
+canonifyURLs = false
 pygmentsUseClasses = true
 
 # Performance optimizations
